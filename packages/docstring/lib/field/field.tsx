@@ -1,7 +1,7 @@
 import React from "react";
 import { IField } from "./type";
 import styled from "@emotion/styled";
-import DropDown from "../drop-menu";
+import DropDown from "../drop-down";
 import Handlebars from "handlebars";
 
 const valuefield = /{{\s?options\s?}}/;
@@ -10,6 +10,11 @@ const dummyItems = [
     name: "Flutter",
     value: "platform.flutter",
     description: "flutter",
+  },
+  {
+    name: "React",
+    value: "platform.react",
+    description: "tsx",
   },
 ];
 
@@ -35,7 +40,6 @@ const field = (props: IField) => {
       ...props,
     });
 
-  console.log("hi", _2);
 
   return (
     <Wrapper>

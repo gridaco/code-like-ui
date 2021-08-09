@@ -60,15 +60,15 @@ interface LanguageConfig {
 type LanguageType = "js" | "dart" | "paython" | LanguageConfig;
 
 const jsstyle: LanguageConfig = {
-docstring: {
+  docstring: {
     start: "/**",
     mid: "*",
     end: "*/",
-  },
+    },
   indent: {
-    mid: 8;
-    end: 8;
-  };
+    mid: 8,
+    end: 8,
+  },
 };
 
 
