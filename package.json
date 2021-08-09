@@ -1,0 +1,10 @@
+{
+  "name": "code-like-ui",
+  "authors": "Grida.co",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "demo",
+    "packages/*"
+  ]
+}
