@@ -1,4 +1,6 @@
-# code-like-ui
+![](./branding/cover.png)
+
+# @code-ui
 
 ui controls seamlessly embedded in code style block
 
