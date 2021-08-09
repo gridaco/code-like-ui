@@ -1,2 +1,2 @@
-import dropMenu from './drop-menu';
-export default dropMenu;
+import DropDown from "./drop-menu";
+export default DropDown;
