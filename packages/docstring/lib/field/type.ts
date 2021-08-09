@@ -1,12 +1,13 @@
 export interface Option<T> {
   name: string;
   value: T;
-  desc?: string;
+  description?: string;
 }
 
-export interface Field<T = string> {
-  tag?: "@" | "";
+export interface IField<T = string> {
+  tag?: "@";
   name: string;
   enabled?: boolean;
+  template?: string;
   options?: Option<T>[];
 }

@@ -80,9 +80,27 @@ docstring: {
 **creating field**
 
 ```ts
+let lang = "tsx";
+const onLangChange = (v) => {
+    lang = v
+}
+const lang_field  = {
+    tag: "@"
+    name: "lang",
+    template?: `{{ tag }}{{ name }}{{ option.name }}`
+    options: [
+        {
+            name: "Flutter",
+            value: "platform.flutter",
+            description: "flutter",
+        }
+    ]
+}
+
 const platform_field  = {
     tag: "@"
-    name: "platform"
+    name: "platform",
+    template: `{{ tag }}{{ name }}{{ value }} (juice.${lang})`
     options: [
         {
             name: "Flutter",
@@ -106,25 +124,20 @@ interface Option<T> {
 interface Field<T = string> {
   tag: "@" | "";
   name: string;
+  template?: string;
   enabled?: boolean;
   // value: string
   options?: Option<T>[];
 }
 ```
 
-
-
 ## The design
 
 Design resource of code-ui is [avalable here][designlink]. For edit permission, please contact us via universe@grida.co
 
-
-
 ### Color schemes
 
 For more color scheme options & customization, read [docs/color-scheme.md](./docs/color-scheme.md)
-
-
 
 ## Proposals
 
@@ -134,7 +147,4 @@ For more color scheme options & customization, read [docs/color-scheme.md](./doc
 
 - https://material-ui.com/components/selects/
 
-
-
 [designlink]: https://www.figma.com/file/nHJQZjVwnF2dtx153MS9J1/code-ui?node-id=2%3A354
-
