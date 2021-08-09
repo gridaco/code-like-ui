@@ -44,7 +44,8 @@ const field = (props: IField) => {
     <Wrapper>
       {_1 && <Tag>{_1}</Tag>}
       <span>{_2}</span>
-      <DropDown id={_1} items={dummyItems} />
+      <DropDown id={props.name} items={dummyItems} />
+
       {_3 && <Label>{_3}</Label>}
     </Wrapper>
   );

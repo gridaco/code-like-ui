@@ -23,6 +23,7 @@
     "access": "public"
   },
   "dependencies": {
+    "@tippyjs/react": "^4.2.5",
     "handlebars": "^4.7.7"
   }
 }

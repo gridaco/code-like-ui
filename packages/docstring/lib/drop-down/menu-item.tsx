@@ -1,6 +1,7 @@
 import React from "react";
 import { Option } from "../field/type";
 import styled from "@emotion/styled";
+import tippy from "tippy.js";
 
 interface IMenuItem {
   option: Option<string>;
@@ -10,7 +11,8 @@ interface IMenuItem {
 const MenuItem = (props: IMenuItem) => {
   const { option, onClick } = props;
   return (
-    <FieldWrapper id={option.value} onClick={() => onClick(option.value)}>
+    <FieldWrapper id="select" onClick={() => onClick(option.value)}>
+      {/* <FieldWrapper id={option.value} onClick={() => onClick(option.value)}> */}
       {option.name}
       <Desc>{option.description}</Desc>
     </FieldWrapper>
