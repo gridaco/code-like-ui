@@ -4,4 +4,4 @@
 
 ## Default
 
-![](./color-scheme (default).png)
+![](./color-scheme-default.png)
