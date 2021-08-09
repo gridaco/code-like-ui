@@ -21,18 +21,24 @@ import CodeLikeView from "code-like-ui";
 
 // ...
 <CodeLikeView
-  lang={} // defaults to js - "js" | "dart" | "paython" | LanguageConfig
+  lang={"jsx"} // defaults to js - "js" | "dart" | "paython" | LanguageConfig
+  style={"monokai"} // default style = monokai
   controls={[
-      platform_field
+      platform_field,
+      lang_field,
   ]}
   expandableConfig={
       lines: 2,
       expandable: true
       hidable: true
   }
-
+  onChange={(field, value) => {
+      //
+  }}
 />;
-// ...
+
+//
+
 ```
 
 ```ts
@@ -103,3 +109,11 @@ interface Field<T = string> {
   options?: Option<T>[];
 }
 ```
+
+## Proposals
+
+- [Easy configurable view with json IO](https://github.com/gridaco/code-like-ui/issues/1)
+
+## References
+
+- https://material-ui.com/components/selects/
