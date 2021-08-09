@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { IField } from "./type";
 import styled from "@emotion/styled";
 import DropDown from "../drop-down";
@@ -40,7 +40,6 @@ const field = (props: IField) => {
       ...props,
     });
 
-
   return (
     <Wrapper>
       {_1 && <Tag>{_1}</Tag>}
@@ -56,7 +55,7 @@ const Wrapper = styled.div`
 `;
 
 const Tag = styled.div`
-  color: red;
+  /* color: red; */
 `;
 
 const Label = styled.div``;
