@@ -6,7 +6,8 @@ const MenuItem = (props: Option<string>) => {
   return (
     <FieldWrapper id={props.value}>
       {props.name}
-      <Desc> {props.description} </Desc>
+      {"    "}
+      {props.description}
     </FieldWrapper>
   );
 };
