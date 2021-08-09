@@ -11,8 +11,7 @@ interface IMenuItem {
 const MenuItem = (props: IMenuItem) => {
   const { option, onClick } = props;
   return (
-    <FieldWrapper id="select" onClick={() => onClick(option.value)}>
-      {/* <FieldWrapper id={option.value} onClick={() => onClick(option.value)}> */}
+    <FieldWrapper id={option.value} onClick={() => onClick(option.value)}>
       {option.name}
       <Desc>{option.description}</Desc>
     </FieldWrapper>
@@ -28,6 +27,7 @@ const FieldWrapper = styled.li`
   padding: 2px 8px;
   font-size: 14px;
   line-height: 18px;
+  z-index: 99999;
 
   &:hover {
     background: #5a5764;

@@ -7,22 +7,18 @@ import Tippy from "@tippyjs/react";
 const DropMenu = (props: IDropDown) => {
   const [item, setItme] = useState<string>(props.items[0].value);
   const [isVisible, setIsVisible] = useState<boolean>(false);
-  const isBrowser = typeof window !== "undefined";
 
   const show = () => setIsVisible(true);
   const hide = () => setIsVisible(false);
 
-  const handleItem = useCallback(
-    (value: string) => {
-      setItme(value);
-      setIsVisible(!isVisible);
-    },
-    [item]
-  );
+  const handleItem = useCallback((value: string) => {
+    setItme(value);
+    hide();
+  }, []);
 
   return (
     <Wrapper>
-      <Tippy
+      <StyledTippy
         visible={isVisible}
         onClickOutside={hide}
         content={
@@ -39,10 +35,8 @@ const DropMenu = (props: IDropDown) => {
           </Options>
         }
       >
-        <Select onClick={isVisible ? hide : show} data-template="select">
-          {item}
-        </Select>
-      </Tippy>
+        <Select onClick={isVisible ? hide : show}>{item}</Select>
+      </StyledTippy>
     </Wrapper>
   );
 };
@@ -54,6 +48,10 @@ type OptionsProps = {
 const Wrapper = styled.div`
   width: fit-content;
   overflow-y: auto;
+`;
+
+const StyledTippy = styled(Tippy)`
+  pointer-events: auto !important;
 `;
 
 const Select = styled.ul`
