@@ -135,6 +135,10 @@ interface Field<T = string> {
 
 Design resource of code-ui is [avalable here][designlink]. For edit permission, please contact us via universe@grida.co
 
+### Color schemes
+
+For more color scheme options & customization, read [docs/color-scheme.md](./docs/color-scheme.md)
+
 ## Proposals
 
 - [Easy configurable view with json IO](https://github.com/gridaco/code-like-ui/issues/1)
