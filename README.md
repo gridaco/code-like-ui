@@ -112,6 +112,14 @@ interface Field<T = string> {
 }
 ```
 
+
+
+## The design
+
+Design resource of code-ui is [avalable here][designlink]. For edit permission, please contact us via universe@grida.co
+
+
+
 ## Proposals
 
 - [Easy configurable view with json IO](https://github.com/gridaco/code-like-ui/issues/1)
@@ -119,3 +127,8 @@ interface Field<T = string> {
 ## References
 
 - https://material-ui.com/components/selects/
+
+
+
+[designlink]: https://www.figma.com/file/nHJQZjVwnF2dtx153MS9J1/code-ui?node-id=2%3A354
+
