@@ -9,7 +9,7 @@ export default function Home() {
   const platform_field: IField = {
     tag: '@',
     name: 'platform',
-    template: `{{ tag }} {{ name }}{{ options }} (juice.${lang})`,
+    template: `{{ tag }}{{ name }} {{ options }} (juice.${lang})`,
     options: [
       {
         name: 'Flutter',
@@ -22,7 +22,7 @@ export default function Home() {
   const lang_field: IField = {
     tag: '@',
     name: 'lang',
-    template: `{{ tag }}{{ name }}{{ option.name }}`,
+    template: `{{ tag }}{{ name }} {{ option.name }}`,
     options: [
       {
         name: 'Flutter',

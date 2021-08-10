@@ -18,7 +18,7 @@ const dummyItems = [
   },
 ];
 
-const defaulttemplate = "{{ tag }}{{ name }}{{ options }}";
+const defaulttemplate = "{{tag}}{{name}} {{ options }}";
 const field = (props: IField) => {
   const template = props.template ?? defaulttemplate;
   const _splits = template.split(valuefield);
@@ -44,8 +44,10 @@ const field = (props: IField) => {
     <Wrapper>
       {_1 && <Tag>{_1}</Tag>}
       <span>{_2}</span>
+      {/* TODO: wrapper using Handlebars */}
+      &nbsp;
       <DropDown id={props.name} items={dummyItems} />
-
+      &nbsp;
       {_3 && <Label>{_3}</Label>}
     </Wrapper>
   );
@@ -53,11 +55,10 @@ const field = (props: IField) => {
 
 const Wrapper = styled.div`
   display: flex;
+  color: ${(props) => props.theme.comment.color};
 `;
 
-const Tag = styled.div`
-  /* color: red; */
-`;
+const Tag = styled.div``;
 
 const Label = styled.div``;
 

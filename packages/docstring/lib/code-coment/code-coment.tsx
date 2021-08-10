@@ -2,23 +2,22 @@ import React from "react";
 import { LanguageConfig } from "./code-coment-type";
 import styled from "@emotion/styled";
 
-const CodeComent = (props: LanguageConfig) => {
-  const docstring = props.docstring;
-  const indent = props.indent;
+interface fieldDocConfig {
+  docstring?: string;
+  indent?: number;
+}
 
-  return (
-    <Wrapper>
-      <Doc>{docstring.start}</Doc>
-      {/* todo: check field length */}
-      <Doc>{docstring.mid}</Doc>
-      <Doc>{docstring.end}</Doc>
-    </Wrapper>
-  );
+const CodeComent = (props: fieldDocConfig) => {
+  return <Doc indent={props.indent}>{props.docstring}</Doc>;
 };
 
-const Wrapper = styled.div`
-  display: flex;
+type DocProps = {
+  indent?: number;
+};
+
+const Doc = styled.div<DocProps>`
+  color: ${(props) => props.theme.comment.color};
+  ${(props) => ({ marginRight: props.indent })}
 `;
-const Doc = styled.div``;
 
 export default CodeComent;

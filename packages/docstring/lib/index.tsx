@@ -4,6 +4,8 @@ import { IField } from "@code-ui/docstring/lib/field/type";
 import React from "react";
 import CodeComent from "./code-coment";
 import { CodeLikeViewProps, _language_config } from "./type";
+import { Line, CodeWrapper, Monokai, Link } from "./style";
+import { ThemeProvider } from "@emotion/react";
 
 export const CodeLikeView = (props: CodeLikeViewProps) => {
   const expandableConfig = props?.expandableConfig;
@@ -14,29 +16,31 @@ export const CodeLikeView = (props: CodeLikeViewProps) => {
   //   return expandableConfig.hidable && lines > expandableConfig.lines;
   // };
   return (
-    <>
-      <CodeComent
-        docstring={langconfig.docstring.start}
-        indent={langconfig.indent.start}
-      />
-      {props.controls.map((field, i) => {
-        return (
-          <>
-            <CodeComent
-              docstring={langconfig.docstring.mid}
-              indent={langconfig.indent.mid}
-            />
-            <Field {...field} />
-          </>
-        );
-      })}
-      <>
+    <ThemeProvider theme={Monokai}>
+      <CodeWrapper>
         <CodeComent
-          docstring={langconfig.docstring.end}
-          indent={langconfig.indent.end}
+          docstring={langconfig.docstring.start}
+          indent={langconfig.indent.start}
         />
-        {/* {expandableConfig?.expandable && shouldhide() && <p>hide</p>} */}
-      </>
-    </>
+        {props.controls.map((field, i) => {
+          return (
+            <Line>
+              <CodeComent
+                docstring={langconfig.docstring.mid}
+                indent={langconfig.indent.mid}
+              />
+              <Field {...field} />
+            </Line>
+          );
+        })}
+        <>
+          <CodeComent
+            docstring={langconfig.docstring.end}
+            indent={langconfig.indent.end}
+          />
+          {/* {expandableConfig?.expandable && shouldhide() && <p>hide</p>} */}
+        </>
+      </CodeWrapper>
+    </ThemeProvider>
   );
 };
