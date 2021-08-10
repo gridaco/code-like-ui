@@ -1,10 +1,14 @@
 {
   "name": "@code-ui/docstring",
   "version": "0.0.0",
-  "repository": "https://github.com/gridaco/code-like-ui",
+  "repository": "https://github.com/gridaco/code-like-ui/tree/main/packages/docstring",
+  "homepage": "https://github.com/gridaco/code-like-ui",
   "author": "Grida.co",
   "license": "Apache 2.0",
   "private": false,
+  "scripts": {
+    "prepack": "tsc"
+  },
   "peerDependencies": {
     "react": "17.0.2",
     "react-dom": "17.0.2"
@@ -25,5 +29,13 @@
   "dependencies": {
     "@tippyjs/react": "^4.2.5",
     "handlebars": "^4.7.7"
-  }
+  },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "dist/index.js",
+    "dist/index.d.ts",
+    "dist/**/*.d.ts",
+    "dist/**/*.js"
+  ]
 }
