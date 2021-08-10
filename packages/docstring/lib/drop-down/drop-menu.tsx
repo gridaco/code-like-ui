@@ -128,7 +128,7 @@ const FieldWrapper = styled.li`
 `;
 const Desc = styled.span`
   color: #bcbcbc;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 15px;
   margin-left: 17px;
   text-align: right;

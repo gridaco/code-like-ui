@@ -23,6 +23,7 @@ export const CodeWrapper = styled.div<Props>`
   background: ${(props) => props.theme.bg.color};
   padding: ${(props) => props.padding};
   font-family: "Source Code Pro", "Courier New", "Lucida Console", Monaco;
+  font-weight: 400;
   overflow-x: auto;
 `;
 
