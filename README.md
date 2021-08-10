@@ -32,7 +32,6 @@ import CodeLikeView from "code-like-ui";
   expandableConfig={
       lines: 2,
       expandable: true
-      hidable: true
   }
   onChange={(field, value) => {
       //
@@ -44,7 +43,7 @@ import CodeLikeView from "code-like-ui";
 ```
 
 ```ts
-interface LanguageConfig {
+export interface LanguageConfig {
   docstring: {
     start: string;
     mid?: string;
@@ -64,15 +63,12 @@ const jsstyle: LanguageConfig = {
     start: "/**",
     mid: "*",
     end: "*/",
-    },
+  },
   indent: {
     mid: 8,
     end: 8,
   },
 };
-
-
-
 ```
 
 ## Comlex Example

@@ -11,8 +11,6 @@ export interface LanguageConfig {
   };
 }
 
-export type LanguageType = "js" | "dart" | "paython" | LanguageConfig;
-
 export const jsstyle: LanguageConfig = {
   docstring: {
     start: "/**",

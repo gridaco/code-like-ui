@@ -1,14 +1,28 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import { field as Field } from '@code-ui/docstring';
+import { CodeLikeView } from '@code-ui/docstring';
 import { IField } from '@code-ui/docstring/lib/field/type';
 export default function Home() {
   const lang = 'tsx';
+
   const platform_field: IField = {
     tag: '@',
     name: 'platform',
     template: `{{ tag }} {{ name }}{{ options }} (juice.${lang})`,
+    options: [
+      {
+        name: 'Flutter',
+        value: 'platform.flutter',
+        description: 'flutter',
+      },
+    ],
+  };
+
+  const lang_field: IField = {
+    tag: '@',
+    name: 'lang',
+    template: `{{ tag }}{{ name }}{{ option.name }}`,
     options: [
       {
         name: 'Flutter',
@@ -26,7 +40,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
-        <Field {...platform_field} />
+        <CodeLikeView
+          lang="js" // defaults to js - "js" | "dart" | "paython" | LanguageConfig
+          style={'monokai'} // default style = monokai
+          controls={[platform_field, lang_field]}
+          expandableConfig={{
+            lines: 2,
+            expandable: true,
+            hidable: true,
+          }}
+          onChange={() => {}}
+        />
       </body>
     </div>
   );

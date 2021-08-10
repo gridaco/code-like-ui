@@ -75,7 +75,9 @@ const DropMenu = (props: IDropDown) => {
           </Options>
         }
       >
-        <Select onClick={isVisible ? hide : show}>{item}</Select>
+        <Select onClick={isVisible ? hide : show}>
+          {props.items.find((el) => el.value === item)?.name}
+        </Select>
       </StyledTippy>
     </Wrapper>
   );
@@ -116,7 +118,7 @@ const FieldWrapper = styled.li`
   font-size: 14px;
   line-height: 18px;
 
-  &.is-selected,
+  /* &.is-selected, */
   &:hover {
     background: #5a5764;
   }
