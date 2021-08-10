@@ -7,6 +7,10 @@ declare module "@emotion/react" {
   export interface Theme extends DocstringTheme {}
 }
 
+export interface Props {
+  padding?: string;
+}
+
 export const Line = styled.div`
   display: flex;
   margin-top: 1px;
@@ -15,8 +19,11 @@ export const Line = styled.div`
   }
 `;
 
-export const CodeWrapper = styled.div`
+export const CodeWrapper = styled.div<Props>`
   background: ${(props) => props.theme.bg.color};
+  padding: ${(props) => props.padding};
+  font-family: "Source Code Pro", "Courier New", "Lucida Console", Monaco;
+  overflow-x: auto;
 `;
 
 export const Link = styled.div`

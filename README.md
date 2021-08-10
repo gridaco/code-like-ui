@@ -25,6 +25,7 @@ import CodeLikeView from "code-like-ui";
 <CodeLikeView
   lang={"jsx"} // defaults to js - "js" | "dart" | "paython" | LanguageConfig
   style={"monokai"} // default style = monokai
+  padding={"10px"}
   controls={[
       platform_field,
       lang_field,
@@ -32,6 +33,7 @@ import CodeLikeView from "code-like-ui";
   expandableConfig={
       lines: 2,
       expandable: true
+      hidable: true
   }
   onChange={(field, value) => {
       //

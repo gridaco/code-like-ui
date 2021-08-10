@@ -15,9 +15,10 @@ export const CodeLikeView = (props: CodeLikeViewProps) => {
   // const shouldhide = () => {
   //   return expandableConfig.hidable && lines > expandableConfig.lines;
   // };
+
   return (
     <ThemeProvider theme={Monokai}>
-      <CodeWrapper>
+      <CodeWrapper padding={props.padding}>
         <CodeComent
           docstring={langconfig.docstring.start}
           indent={langconfig.indent.start}

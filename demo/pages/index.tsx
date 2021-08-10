@@ -41,8 +41,9 @@ export default function Home() {
       </Head>
       <body>
         <CodeLikeView
-          lang="js" // defaults to js - "js" | "dart" | "paython" | LanguageConfig
+          lang="dart" // defaults to js - "js" | "dart" | "paython" | LanguageConfig
           style={'monokai'} // default style = monokai
+          padding={'10px'}
           controls={[platform_field, lang_field]}
           expandableConfig={{
             lines: 2,

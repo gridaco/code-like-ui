@@ -21,6 +21,7 @@ export interface ExpandableConfig {
 export interface CodeLikeViewProps {
   lang?: LanguageType;
   style?: string;
+  padding?: string;
   controls: IField[];
   expandableConfig: ExpandableConfig;
   onChange: () => void;
