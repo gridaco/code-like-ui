@@ -18,19 +18,19 @@ export interface ExpandableConfig {
   hidable?: boolean;
 }
 
-export interface CodeLikeViewProps {
+export interface CodeLikeViewProps<T = string> {
   lang?: LanguageType;
   style?: string;
   padding?: string;
   controls: IField[];
   expandableConfig: ExpandableConfig;
-  onChange: () => void;
+  onChange: (field: IField, value: T) => void;
 }
 
 export const _DEFAULT_JSS_STYLE: LanguageConfig = {
   docstring: {
     start: "/**",
-    mid: "*",
+    mid: " *",
     end: "*/",
   },
   indent: {
