@@ -1,28 +1,27 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { CodeLikeView } from '@code-ui/docstring';
 import { IField } from '@code-ui/docstring/lib/field/type';
 export default function Home() {
   const lang = 'tsx';
 
-  const platform_field: IField = {
-    tag: '@',
-    name: 'platform',
-    template: `{{ tag }}{{ name }} {{ options }} (juice.${lang})`,
-    options: [
-      {
-        name: 'Flutter',
-        value: 'platform.flutter',
-        description: 'flutter',
-      },
-    ],
-  };
-
   const lang_field: IField = {
     tag: '@',
     name: 'lang',
     template: `{{ tag }}{{ name }} {{ option.name }}`,
+    options: [
+      {
+        name: 'Javascript',
+        value: 'lang.javascript',
+        description: 'javascript',
+      },
+    ],
+  };
+
+  const platform_field: IField = {
+    tag: '@',
+    name: 'platform',
+    template: `{{ tag }}{{ name }} {{ options }} (juice.${lang})`,
     options: [
       {
         name: 'Flutter',

@@ -46,18 +46,20 @@ import DocstringView from "@code-ui/docstring";
 
 ```ts
 let lang = "tsx";
+
 const onLangChange = (v) => {
     lang = v
 }
+
 const lang_field  = {
     tag: "@"
     name: "lang",
     template?: `{{ tag }}{{ name }}{{ option.name }}`
     options: [
         {
-            name: "Flutter",
-            value: "platform.flutter",
-            description: "flutter",
+            name: "Javascript",
+            value: "platform.javascript",
+            description: "javascript",
         }
     ]
 }
@@ -74,6 +76,7 @@ const platform_field  = {
         }
     ]
 }
+
 ```
 
 ## Props
