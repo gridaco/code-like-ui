@@ -21,10 +21,10 @@ npm i @code-ui/docstring
 ```tsx
 import DocstringView from "@code-ui/docstring";
 
-// ...
 <DocstringView
   lang={"jsx"} // defaults to js - "js" | "dart" | "paython" | LanguageConfig
   style={"monokai"} // default style = monokai
+  padding={"10px"} // code wrapper padding
   controls={[
       platform_field,
       lang_field,
@@ -34,11 +34,9 @@ import DocstringView from "@code-ui/docstring";
       expandable: true
   }
   onChange={(field, value) => {
-      //
+      setField(field,value)
   }}
 />;
-
-//
 
 ```
 
@@ -81,7 +79,6 @@ const platform_field  = {
 ## Props
 
 ```ts
-///
 interface Option<T> {
   name: string;
   value: T;
@@ -93,7 +90,6 @@ interface Field<T = string> {
   name: string;
   template?: string;
   enabled?: boolean;
-  // value: string
   options?: Option<T>[];
 }
 ```
