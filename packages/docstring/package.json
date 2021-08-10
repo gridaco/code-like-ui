@@ -1,10 +1,11 @@
 {
   "name": "@code-ui/docstring",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": "https://github.com/gridaco/code-like-ui/tree/main/packages/docstring",
   "homepage": "https://github.com/gridaco/code-like-ui",
   "author": "Grida.co",
   "license": "Apache 2.0",
+  "main": "dist/index.js",
   "private": false,
   "scripts": {
     "prepack": "tsc"
