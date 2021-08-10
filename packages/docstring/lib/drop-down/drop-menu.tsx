@@ -25,7 +25,6 @@ const DropMenu = (props: IDropDown) => {
    */
   const controlKeyComand = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>) => {
-      console.log("key Evnet");
       if (event.key === "ArrowUp") {
         const previndex =
           (selectedIndex + props.items.length - 1) % props.items.length;

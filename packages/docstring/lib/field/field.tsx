@@ -5,6 +5,7 @@ import DropDown from "../drop-down";
 import Handlebars from "handlebars";
 
 const valuefield = /{{\s?options\s?}}/;
+
 const dummyItems = [
   {
     name: "Flutter",
@@ -19,8 +20,15 @@ const dummyItems = [
 ];
 
 const defaulttemplate = "{{tag}}{{name}} {{ options }}";
-const field = (props: IField) => {
-  const template = props.template ?? defaulttemplate;
+
+interface Props<T = string> {
+  field: IField;
+  onChange: (field: string, value: T) => void;
+}
+
+const field = (props: Props) => {
+  const template = props.field.template ?? defaulttemplate;
+  const field = props.field;
   const _splits = template.split(valuefield);
   const __splits_1 = _splits[0];
   const __splits_3 = _splits[1];
@@ -46,7 +54,13 @@ const field = (props: IField) => {
       <span>{_2}</span>
       {/* TODO: wrapper using Handlebars */}
       &nbsp;
-      <DropDown id={props.name} items={dummyItems} />
+      <DropDown
+        id={field.name}
+        items={dummyItems}
+        onSelect={(d) => {
+          props.onChange(field.name, d);
+        }}
+      />
       &nbsp;
       {_3 && <Label>{_3}</Label>}
     </Wrapper>

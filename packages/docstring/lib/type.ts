@@ -24,7 +24,7 @@ export interface CodeLikeViewProps<T = string> {
   padding?: string;
   controls: IField[];
   expandableConfig: ExpandableConfig;
-  onChange: (field: IField, value: T) => void;
+  onChange: (field: string, value: T) => void;
 }
 
 export const _DEFAULT_JSS_STYLE: LanguageConfig = {

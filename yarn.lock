@@ -88,6 +88,14 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
+"@code-ui/docstring@0.0.0":
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/@code-ui/docstring/-/docstring-0.0.0.tgz#c1f5b088bb65f10c682422cd1e957798cb3e0bb6"
+  integrity sha512-gK61bqYNPdjEXzptWjyXfz1wyChdYXyhcLS/d31Nt/+QUEiJxeF/2b6JRqpxCGlqJzU4CxRCnpMuKr4vMacFPQ==
+  dependencies:
+    "@tippyjs/react" "^4.2.5"
+    handlebars "^4.7.7"
+
 "@emotion/babel-plugin@^11.3.0":
   version "11.3.0"
   resolved "https://registry.yarnpkg.com/@emotion/babel-plugin/-/babel-plugin-11.3.0.tgz#3a16850ba04d8d9651f07f3fb674b3436a4fb9d7"

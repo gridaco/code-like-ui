@@ -32,6 +32,11 @@ export default function Home() {
     ],
   };
 
+  function handleClick(field: string, value: string) {
+    console.log(field);
+    console.log(value);
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -50,7 +55,7 @@ export default function Home() {
             expandable: true,
             hidable: true,
           }}
-          onChange={() => {}}
+          onChange={handleClick}
         />
       </body>
     </div>

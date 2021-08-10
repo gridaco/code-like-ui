@@ -12,6 +12,8 @@ export const CodeLikeView = (props: CodeLikeViewProps) => {
   const langconfig = _language_config(props.lang ?? "js");
   const lines = props.controls.length; // TODO: make state
 
+  const onChange = props.onChange;
+
   // const shouldhide = () => {
   //   return expandableConfig.hidable && lines > expandableConfig.lines;
   // };
@@ -30,7 +32,7 @@ export const CodeLikeView = (props: CodeLikeViewProps) => {
                 docstring={langconfig.docstring.mid}
                 indent={langconfig.indent.mid}
               />
-              <Field {...field} />
+              <Field field={field} onChange={onChange} />
             </Line>
           );
         })}
