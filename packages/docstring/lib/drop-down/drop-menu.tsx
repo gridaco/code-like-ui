@@ -15,6 +15,7 @@ const DropMenu = (props: IDropDown) => {
   const handleItem = useCallback((value: string) => {
     setItme(value);
     hide();
+    props.onSelect(value);
   }, []);
 
   /**
