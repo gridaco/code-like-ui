@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css';
 import { CodeLikeView } from '@code-ui/docstring';
 import { IField } from '@code-ui/docstring/lib/field/type';
 export default function Home() {
-  const lang = 'tsx';
+  const lang = 'jsx';
 
   const lang_field: IField = {
     tag: '@',
@@ -29,14 +29,14 @@ export default function Home() {
     template: `{{ tag }}{{ name }} {{ options }} (juice.${lang})`,
     options: [
       {
-        name: "Flutter",
-        value: "platform.flutter",
-        description: "flutter",
+        name: 'React',
+        value: 'platform.react',
+        description: 'tsx',
       },
       {
-        name: "React",
-        value: "platform.react",
-        description: "tsx",
+        name: 'Flutter',
+        value: 'platform.flutter',
+        description: 'flutter',
       },
     ],
   };
@@ -56,7 +56,7 @@ export default function Home() {
       <body>
         <CodeLikeView
           lang="dart" // defaults to js - "js" | "dart" | "paython" | LanguageConfig
-          style={'monokai'} // default style = monokai
+          theme={'monokai'} // default style = monokai
           padding={'10px'}
           controls={[platform_field, lang_field]}
           expandableConfig={{

@@ -20,7 +20,7 @@ export interface ExpandableConfig {
 
 export interface CodeLikeViewProps<T = string> {
   lang?: LanguageType;
-  style?: string;
+  theme?: string;
   padding?: string;
   controls: IField[];
   expandableConfig: ExpandableConfig;
