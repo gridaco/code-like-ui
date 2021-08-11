@@ -35,17 +35,17 @@ const field = (props: Props) => {
   const _1 =
     __splits_1 &&
     Handlebars.compile(__splits_1)({
-      ...props,
+      ...props.field,
     });
 
   const _2 = Handlebars.compile("{{ options.name }}")({
-    ...props,
+    ...props.field,
   });
 
   const _3 =
     __splits_3 &&
     Handlebars.compile(__splits_3)({
-      ...props,
+      ...props.field,
     });
 
   return (
