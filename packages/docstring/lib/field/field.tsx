@@ -35,8 +35,7 @@ const field = (props: Props) => {
       ...props.field,
     });
 
-    console.log(_1)
-    console.log(_2)
+    
   return (
     <Wrapper>
       {_1 && <Tag>{_1}</Tag>}
