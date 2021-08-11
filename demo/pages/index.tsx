@@ -8,12 +8,17 @@ export default function Home() {
   const lang_field: IField = {
     tag: '@',
     name: 'lang',
-    template: `{{ tag }}{{ name }} {{ option.name }}`,
+    template: `{{ tag }}{{ name }} {{ option }}`,
     options: [
       {
-        name: 'Javascript',
+        name: 'javascript',
         value: 'lang.javascript',
         description: 'javascript',
+      },
+      {
+        name: 'dart',
+        value: 'lang.dart',
+        description: 'dart',
       },
     ],
   };
@@ -24,9 +29,14 @@ export default function Home() {
     template: `{{ tag }}{{ name }} {{ options }} (juice.${lang})`,
     options: [
       {
-        name: 'Flutter',
-        value: 'platform.flutter',
-        description: 'flutter',
+        name: "Flutter",
+        value: "platform.flutter",
+        description: "flutter",
+      },
+      {
+        name: "React",
+        value: "platform.react",
+        description: "tsx",
       },
     ],
   };

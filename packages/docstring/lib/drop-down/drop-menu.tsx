@@ -53,6 +53,7 @@ const DropMenu = (props: IDropDown) => {
       <StyledTippy
         visible={isVisible}
         onClickOutside={hide}
+        placement={"bottom"}
         content={
           <Options onKeyUp={(event) => controlKeyComand(event)}>
             {props.items.map((item, index) => {

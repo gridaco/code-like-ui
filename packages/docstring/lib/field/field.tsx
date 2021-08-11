@@ -6,18 +6,6 @@ import Handlebars from "handlebars";
 
 const valuefield = /{{\s?options\s?}}/;
 
-const dummyItems = [
-  {
-    name: "Flutter",
-    value: "platform.flutter",
-    description: "flutter",
-  },
-  {
-    name: "React",
-    value: "platform.react",
-    description: "tsx",
-  },
-];
 
 const defaulttemplate = "{{tag}}{{name}} {{ options }}";
 
@@ -37,8 +25,7 @@ const field = (props: Props) => {
     Handlebars.compile(__splits_1)({
       ...props.field,
     });
-
-  const _2 = Handlebars.compile("{{ options.name }}")({
+  const _2 = Handlebars.compile("option")({
     ...props.field,
   });
 
@@ -48,19 +35,20 @@ const field = (props: Props) => {
       ...props.field,
     });
 
+    console.log(_1)
+    console.log(_2)
   return (
     <Wrapper>
       {_1 && <Tag>{_1}</Tag>}
-      <span>{_2}</span>
-      {/* TODO: wrapper using Handlebars */}
       &nbsp;
+      {_2  && field.options && 
       <DropDown
         id={field.name}
-        items={dummyItems}
+        items={field.options}
         onSelect={(d) => {
           props.onChange(field.name, d);
         }}
-      />
+      />}
       &nbsp;
       {_3 && <Label>{_3}</Label>}
     </Wrapper>
