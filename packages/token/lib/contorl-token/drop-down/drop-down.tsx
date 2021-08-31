@@ -91,8 +91,10 @@ type OptionsProps = {
 const Wrapper = styled.div`
   width: fit-content;
   overflow-y: auto;
-  /* background: ${(props) => props.theme.highlight.bg.color};
-  color: ${(props) => props.theme.highlight.text.color}; */
+
+  // Temporarily fixed until theme is modified
+  background: #3a3842;
+  color: #d7d7d7;
   border-radius: 2px;
 `;
 
