@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { IField } from "./type";
 import styled from "@emotion/styled";
-import DropDown from "../drop-down";
 import Handlebars from "handlebars";
+import { DropDown } from "@code-ui/token";
 
 const valuefield = /{{\s?options\s?}}/;
-
 
 const defaulttemplate = "{{tag}}{{name}} {{ options }}";
 
@@ -35,19 +34,19 @@ const field = (props: Props) => {
       ...props.field,
     });
 
-    
   return (
     <Wrapper>
       {_1 && <Tag>{_1}</Tag>}
       &nbsp;
-      {_2  && field.options && 
-      <DropDown
-        id={field.name}
-        items={field.options}
-        onSelect={(d) => {
-          props.onChange(field.name, d);
-        }}
-      />}
+      {_2 && field.options && (
+        <DropDown
+          id={field.name}
+          items={field.options}
+          onSelect={(d) => {
+            props.onChange(field.name, d);
+          }}
+        />
+      )}
       &nbsp;
       {_3 && <Label>{_3}</Label>}
     </Wrapper>

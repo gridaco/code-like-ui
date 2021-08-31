@@ -1,4 +1,3 @@
-import dropMenu from "./drop-down";
 import Field from "./field";
 import { IField } from "@code-ui/docstring/lib/field/type";
 import React from "react";
