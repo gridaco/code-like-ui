@@ -3,6 +3,7 @@ import { Monokai, ThemeType } from "@code-ui/color-scheme";
 import { DropDown, Input } from "@code-ui/token";
 import { ThemeProvider } from "@emotion/react";
 import { InterfaceProps, InterfaceFieldProps } from "./type";
+import { Field } from "./field";
 
 export function Interface(props: InterfaceProps) {
   const { lang, theme, fields, expandableConfig, addFieldConfig } = props;
@@ -13,9 +14,10 @@ export function Interface(props: InterfaceProps) {
           <div key={`interface-field-num-${i}`}>
             <span>{field.tag}</span>
             <span>{field.name}</span>
-            <span>{field.token.static?.keyword}</span>
+            <span>{field.token?.static?.keyword}</span>
             <span> : </span>
             {/* <span>{field.token}</span> */}
+            <Field field={field} onChange={props.onChange} />
           </div>
         );
       })}

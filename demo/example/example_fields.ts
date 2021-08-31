@@ -41,7 +41,7 @@ export const docstring_platform_field: IField = {
 
 export const interface_field: InterfaceFieldProps = {
   tag: '',
-  template: `{{ tag }}{{ static.keword }}{{ contorl.input }} {`,
+  template: `{{ static }}{{ contorl.input }} {`,
   token: {
     static: { keyword: 'interface' },
     contorl: { defaultValue: 'Props' },
@@ -64,7 +64,7 @@ export const interface_test_options = [
 export const interface_property_Field: InterfaceFieldProps = {
   tag: '',
   name: 'buttonText',
-  template: `{{ tag }}{{ name }} : {{ contorl.dropdown }} ;`,
+  template: `{{ name }} : {{ contorl.dropdown }};`,
   token: {
     contorl: {
       defaultValue: interface_test_options[0],
