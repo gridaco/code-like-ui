@@ -1,7 +1,6 @@
 import Field from "./field";
-import { IField } from "@code-ui/docstring/lib/field/type";
 import React from "react";
-import CodeComent from "./code-coment";
+import { CodeComent } from "@code-ui/token";
 import { CodeLikeViewProps, _language_config } from "./type";
 import { Line, CodeWrapper, Monokai, Link } from "./style";
 import { ThemeProvider } from "@emotion/react";

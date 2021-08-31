@@ -1,16 +1,5 @@
 import { IField } from "./field/type";
-interface LanguageConfig {
-  docstring: {
-    start: string;
-    mid?: string;
-    end: string;
-  };
-  indent: {
-    start?: number;
-    mid?: number;
-    end: number;
-  };
-}
+import { LanguageConfig } from "@code-ui/type";
 
 export interface ExpandableConfig {
   lines: number;
