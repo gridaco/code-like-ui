@@ -27,7 +27,7 @@ export interface CodeLikeViewProps<T = string> {
   onChange: (field: string, value: T) => void;
 }
 
-export const _DEFAULT_JSS_STYLE: LanguageConfig = {
+export const _DEFAULT_JS_STYLE: LanguageConfig = {
   docstring: {
     start: "/**",
     mid: " *",
@@ -56,7 +56,7 @@ export type LanguageType = "js" | "dart" | "paython" | LanguageConfig;
 export function _language_config(type: LanguageType): LanguageConfig {
   if (typeof type == "string") {
     if (type === "js") {
-      return _DEFAULT_JSS_STYLE;
+      return _DEFAULT_JS_STYLE;
     } else if (type === "dart") {
       return _DEFAULT_DART;
     }

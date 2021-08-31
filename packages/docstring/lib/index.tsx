@@ -7,7 +7,7 @@ import { CodeLikeViewProps, _language_config } from "./type";
 import { Line, CodeWrapper, Monokai, Link } from "./style";
 import { ThemeProvider } from "@emotion/react";
 
-export const CodeLikeView = (props: CodeLikeViewProps) => {
+export const Docstring = (props: CodeLikeViewProps) => {
   const expandableConfig = props?.expandableConfig;
   const langconfig = _language_config(props.lang ?? "js");
   const lines = props.controls.length; // TODO: make state
