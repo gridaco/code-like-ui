@@ -1,5 +1,4 @@
 import React from "react";
-import { LanguageConfig } from "./code-coment-type";
 import styled from "@emotion/styled";
 
 interface fieldDocConfig {

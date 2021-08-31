@@ -1,9 +1,4 @@
-export interface Option<T> {
-  name: string;
-  value: T;
-  description?: string;
-}
-
+import { Option } from "@code-ui/type";
 export interface IField<T = string> {
   tag?: "@";
   name: string;
