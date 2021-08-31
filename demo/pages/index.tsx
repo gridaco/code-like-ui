@@ -4,45 +4,12 @@ import { Docstring } from '@code-ui/docstring';
 import { Interface } from '@code-ui/interface';
 import { IField } from '@code-ui/docstring/lib/field/type';
 import React from 'react';
+import {
+  docstring_lang_field,
+  docstring_platform_field,
+} from './example_fields';
+
 export default function Home() {
-  const lang = 'jsx';
-
-  const lang_field: IField = {
-    tag: '@',
-    name: 'lang',
-    template: `{{ tag }}{{ name }} {{ option }}`,
-    options: [
-      {
-        name: 'javascript',
-        value: 'lang.javascript',
-        description: 'javascript',
-      },
-      {
-        name: 'dart',
-        value: 'lang.dart',
-        description: 'dart',
-      },
-    ],
-  };
-
-  const platform_field: IField = {
-    tag: '@',
-    name: 'platform',
-    template: `{{ tag }}{{ name }} {{ options }} (juice.${lang})`,
-    options: [
-      {
-        name: 'React',
-        value: 'platform.react',
-        description: 'tsx',
-      },
-      {
-        name: 'Flutter',
-        value: 'platform.flutter',
-        description: 'flutter',
-      },
-    ],
-  };
-
   function handleClick(field: string, value: string) {
     console.log(field);
     console.log(value);
@@ -61,7 +28,7 @@ export default function Home() {
           lang="dart" // defaults to js - "js" | "dart" | "paython" | LanguageConfig
           theme={'monokai'} // default style = monokai
           padding={'10px'}
-          controls={[platform_field, lang_field]}
+          controls={[docstring_platform_field, docstring_lang_field]}
           expandableConfig={{
             lines: 2,
             expandable: true,
