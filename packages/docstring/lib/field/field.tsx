@@ -4,7 +4,7 @@ import Handlebars from "handlebars";
 import { DropDown } from "@code-ui/token";
 import { IField } from "../type";
 
-const valuefield = /{{\s?options\s?}}/;
+const valueField = /{{\s?options\s?}}/;
 
 const defaultTemplate = "{{tag}}{{name}} {{ options }}";
 
@@ -16,7 +16,7 @@ interface Props<T = string> {
 const field = (props: Props) => {
   const template = props.field.template ?? defaultTemplate;
   const field = props.field;
-  const _splits = template.split(valuefield);
+  const _splits = template.split(valueField);
   const __splits_1 = _splits[0];
   const __splits_3 = _splits[1];
   const _1 =
