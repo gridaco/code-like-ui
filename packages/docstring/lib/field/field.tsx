@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { IField } from "./type";
 import styled from "@emotion/styled";
 import Handlebars from "handlebars";
 import { DropDown } from "@code-ui/token";
+import { IField } from "../type";
 
 const valuefield = /{{\s?options\s?}}/;
 

@@ -1,10 +1,10 @@
-import { IField } from "./field/type";
-import { LanguageConfig } from "@code-ui/type";
-
-export interface ExpandableConfig {
-  lines: number;
-  expandable: boolean;
-  hidable?: boolean;
+import { LanguageConfig, Option, ExpandableConfig } from "@code-ui/type";
+export interface IField<T = string> {
+  tag?: "@";
+  name: string;
+  enabled?: boolean;
+  template?: string;
+  options?: Option<T>[];
 }
 
 export interface CodeLikeViewProps<T = string> {
@@ -41,19 +41,3 @@ export const _DEFAULT_DART: LanguageConfig = {
 };
 
 export type LanguageType = "js" | "dart" | "paython" | LanguageConfig;
-
-export function _language_config(type: LanguageType): LanguageConfig {
-  if (typeof type == "string") {
-    if (type === "js") {
-      return _DEFAULT_JS_STYLE;
-    } else if (type === "dart") {
-      return _DEFAULT_DART;
-    }
-    //  TODO: add python preset
-    else {
-      throw `${type} is not a valid preset`;
-    }
-  } else {
-    return type as LanguageConfig;
-  }
-}
