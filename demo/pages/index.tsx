@@ -6,6 +6,8 @@ import React from 'react';
 import {
   docstring_lang_field,
   docstring_platform_field,
+  interface_field,
+  interface_property_Field,
 } from '../example/example_fields';
 
 export default function Home() {
@@ -22,7 +24,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
-        {/* <Interface /> */}
+        <Interface
+          lang={'js'}
+          theme={'monokai'}
+          fields={[interface_field, interface_property_Field]}
+          onChange={handleClick}
+        />
         <Docstring
           lang="dart" // defaults to js - "js" | "dart" | "paython" | LanguageConfig
           theme={'monokai'} // default style = monokai
