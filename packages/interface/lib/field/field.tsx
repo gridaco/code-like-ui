@@ -1,6 +1,7 @@
 import React from "react";
 import Handlebars from "handlebars";
 import { InterfaceFieldProps } from "../type";
+import { ContorlTokenHandle, StaticTokenHandle } from "@code-ui/token";
 
 const defaultTemplate = "{{tag}}{{name}}{{ static }}{{ contorl.input }}";
 
@@ -11,10 +12,11 @@ interface IField<T = string> {
 
 // For checking {{ static }}
 const staticRegx = /{{\s?static\s?}}/;
-
 // For checking  {{ contorl.~ }}
 const contorlRegx = /{{\s?contorl\.[a-z]*\s?}}/;
 
+const CONTORL = "contorl";
+const STATIC = "static";
 export function Field(props: IField) {
   const { field, onChange } = props;
   const template = field.template ?? defaultTemplate;
@@ -24,21 +26,27 @@ export function Field(props: IField) {
 
   contorlSplits.map((split, index) => {
     if (index === 1) {
-      fieldArray.push("contorl");
+      fieldArray.push(CONTORL);
     }
     if (staticRegx.test(split)) {
       const staticSplits = split.split(staticRegx);
       fieldArray.push(staticSplits[0]);
-      fieldArray.push("static");
+      fieldArray.push(STATIC);
       fieldArray.push(staticSplits[1]);
     } else {
       fieldArray.push(split);
     }
   });
-  console.log("origin : ", field);
-  console.log("handling : ", fieldArray);
 
-  // fieldArray.map((field, index) => {});
+  const _fieldArray = fieldArray.filter((fieldArray) => fieldArray !== "");
+
+  _fieldArray.map((field, index) => {
+    if (field === CONTORL) {
+      ContorlTokenHandle();
+    } else if (field === STATIC) {
+      StaticTokenHandle();
+    }
+  });
 
   // console.log(_1);
   return (

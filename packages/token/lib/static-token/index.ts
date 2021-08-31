@@ -1,2 +1,3 @@
 import CodeComent from "./code-coment";
-export { CodeComent };
+import { StaticTokenHandle } from "./static-token-handle";
+export { CodeComent, StaticTokenHandle };
