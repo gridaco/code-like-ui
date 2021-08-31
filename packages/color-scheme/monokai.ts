@@ -1,6 +1,6 @@
-import { DocstringTheme } from "./type";
+import { ColorTheme } from "./type";
 
-export const Monokai: DocstringTheme = {
+export const Monokai: ColorTheme = {
   highlight: {
     text: { color: "#D7D7D7" },
     bg: { color: "#3A3842" },
