@@ -16,6 +16,9 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@code-ui/color-scheme": "0.0.0",
+    "@code-ui/token": "0.0.0",
+    "@code-ui/type": "0.0.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@types/react": "^17.0.16",
@@ -28,9 +31,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
-    "handlebars": "^4.7.7"
-  },
   "files": [
     "README.md",
     "LICENSE",
@@ -38,5 +38,8 @@
     "dist/index.d.ts",
     "dist/**/*.d.ts",
     "dist/**/*.js"
-  ]
+  ],
+  "dependencies": {
+    "@emotion/react": "^11.4.1"
+  }
 }
