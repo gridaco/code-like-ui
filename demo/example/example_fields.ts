@@ -1,4 +1,4 @@
-import { IField } from '../../packages/docstring/lib/field/type';
+import { IField } from '@code-ui/docstring';
 
 export const docstring_lang_field: IField = {
   tag: '@',

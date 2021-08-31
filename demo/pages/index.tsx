@@ -2,12 +2,11 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { Docstring } from '@code-ui/docstring';
 import { Interface } from '@code-ui/interface';
-import { IField } from '@code-ui/docstring/lib/field/type';
 import React from 'react';
 import {
   docstring_lang_field,
   docstring_platform_field,
-} from './example_fields';
+} from '../example/example_fields';
 
 export default function Home() {
   function handleClick(field: string, value: string) {
@@ -23,7 +22,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
-        <Interface />
+        {/* <Interface /> */}
         <Docstring
           lang="dart" // defaults to js - "js" | "dart" | "paython" | LanguageConfig
           theme={'monokai'} // default style = monokai
