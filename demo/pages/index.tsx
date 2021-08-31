@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import { CodeLikeView } from '@code-ui/docstring';
+import { Docstring } from '@code-ui/docstring';
+import { Interface } from '@code-ui/interface';
 import { IField } from '@code-ui/docstring/lib/field/type';
+import React from 'react';
 export default function Home() {
   const lang = 'jsx';
 
@@ -54,7 +56,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
-        <CodeLikeView
+        <Interface />
+        <Docstring
           lang="dart" // defaults to js - "js" | "dart" | "paython" | LanguageConfig
           theme={'monokai'} // default style = monokai
           padding={'10px'}
