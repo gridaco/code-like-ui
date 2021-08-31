@@ -4,7 +4,7 @@ import { IDropDown } from "./menu-type";
 import Tippy from "@tippyjs/react";
 // import { Option } from "../field/type";
 
-export const DropDown = (props?: IDropDown) => {
+export const DropDown = (props: IDropDown) => {
   const [item, setItme] = useState<string>(props.items[0].value);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [isVisible, setIsVisible] = useState<boolean>(false);
