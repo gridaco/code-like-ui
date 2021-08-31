@@ -20,7 +20,7 @@ export function Field(props: IField) {
   const template = field.template ?? defaultTemplate;
   const contorlSplits = template.split(contorlRegx);
 
-  let fieldArray = [];
+  let fieldArray: string[] = [];
 
   contorlSplits.map((split, index) => {
     if (index === 1) {
@@ -37,6 +37,8 @@ export function Field(props: IField) {
   });
   console.log("origin : ", field);
   console.log("handling : ", fieldArray);
+
+  // fieldArray.map((field, index) => {});
 
   // console.log(_1);
   return (
