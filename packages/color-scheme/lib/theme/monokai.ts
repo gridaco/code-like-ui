@@ -1,4 +1,4 @@
-import { ColorTheme } from "./type";
+import { ColorTheme } from "../type";
 
 export const Monokai: ColorTheme = {
   highlight: {
