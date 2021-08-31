@@ -6,7 +6,7 @@ import { IField } from "../type";
 
 const valuefield = /{{\s?options\s?}}/;
 
-const defaulttemplate = "{{tag}}{{name}} {{ options }}";
+const defaultTemplate = "{{tag}}{{name}} {{ options }}";
 
 interface Props<T = string> {
   field: IField;
@@ -14,7 +14,7 @@ interface Props<T = string> {
 }
 
 const field = (props: Props) => {
-  const template = props.field.template ?? defaulttemplate;
+  const template = props.field.template ?? defaultTemplate;
   const field = props.field;
   const _splits = template.split(valuefield);
   const __splits_1 = _splits[0];
