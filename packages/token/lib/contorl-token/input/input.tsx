@@ -19,7 +19,7 @@ export const Input = (props: InputPrpps) => {
     }
   }, [inputValue]);
 
-  function handleInput(value: string) {
+  function inputOnChagne(value: string) {
     setInputValue(value);
     props.onChange("interfaceName", value);
   }
@@ -27,7 +27,7 @@ export const Input = (props: InputPrpps) => {
   return (
     <>
       <StyledInput
-        onChange={(e) => handleInput(e.target.value)}
+        onChange={(e) => inputOnChagne(e.target.value)}
         value={inputValue}
         size={inputSize}
       />
