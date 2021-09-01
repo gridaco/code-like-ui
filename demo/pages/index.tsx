@@ -31,7 +31,7 @@ export default function Home() {
           theme={'monokai'}
           onChange={handleClick}
           interfaceName={'Props'}
-          attr={[interfaceAttr1, interfaceAttr2]}
+          attrs={[interfaceAttr1, interfaceAttr2]}
         />
         <Docstring
           lang="dart" // defaults to js - "js" | "dart" | "paython" | LanguageConfig

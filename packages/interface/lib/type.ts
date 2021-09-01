@@ -64,7 +64,7 @@ export interface InterfaceProps<T = string> {
   lang?: LanguageType; // default 'js'
   theme?: ThemeType; // monokai
   interfaceName: string;
-  attr: InterfaceAttr[];
+  attrs: InterfaceAttr[];
   expandableConfig?: ExpandableConfig;
   addFieldConfig?: AddFieldConfig;
   onChange: (field: string, value: T) => void; // fix it!

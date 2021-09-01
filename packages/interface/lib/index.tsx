@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Monokai, Monokai_Test, ThemeType } from "@code-ui/color-scheme";
 import { DropDown, Input } from "@code-ui/token";
 import { ThemeProvider } from "@emotion/react";
-import { InterfaceProps, InterfaceFieldProps } from "./type";
+import { InterfaceProps, InterfaceFieldProps, InterfaceAttr } from "./type";
 import { Field } from "./field";
 import styled from "@emotion/styled";
 
@@ -41,20 +41,17 @@ type KindOfType =
   | "type"
   | "any"
   | "widget";
-interface InterfaceAttr {
-  label: string;
-  type: KindOfType;
-}
 
 export function Interface(props: InterfaceProps) {
-  const { lang, theme, interfaceName, attr, expandableConfig, addFieldConfig } =
-    props;
+  const {
+    lang,
+    theme,
+    interfaceName,
+    attrs,
+    expandableConfig,
+    addFieldConfig,
+  } = props;
   const [inputValue, setInputValue] = useState("props");
-  const [inputSize, setInputSize] = useState(4);
-
-  useEffect(() => {
-    setInputSize(inputValue.length + 1);
-  }, [inputValue]);
 
   return (
     <ThemeProvider theme={Monokai_Test}>
@@ -64,50 +61,22 @@ export function Interface(props: InterfaceProps) {
 
           <Input value={props.interfaceName} onChange={props.onChange} />
           <Span>{`{`}</Span>
-          <Depth level={1}>
-            <Span>coverImage</Span>
-            <Span>:</Span>
-            <DropDownStyle>
-              <DropDown
-                id="coverImage"
-                onSelect={() => props.onChange}
-                items={interface_test_options}
-              />
-            </DropDownStyle>
-          </Depth>
-          <Depth level={1}>
-            <Span>content</Span>
-            <Span>:</Span>
-            <DropDownStyle>
-              <DropDown
-                id="content"
-                onSelect={() => props.onChange}
-                items={interface_test_options}
-              />
-            </DropDownStyle>
-          </Depth>
-          <Depth level={1}>
-            <Span>buttonText</Span>
-            <Span>:</Span>
-            <DropDownStyle>
-              <DropDown
-                id="buttonText"
-                onSelect={() => props.onChange}
-                items={interface_test_options}
-              />
-            </DropDownStyle>
-          </Depth>
-          <Depth level={1}>
-            <Span>onClick</Span>
-            <Span>:</Span>
-            <DropDownStyle>
-              <DropDown
-                id="onClick"
-                onSelect={() => props.onChange}
-                items={interface_evnet_options}
-              />
-            </DropDownStyle>
-          </Depth>
+          {attrs.map((attr: InterfaceAttr, index: number) => {
+            return (
+              <Depth level={1} key={`interface-label-${attr.label}-${index}`}>
+                <Span>{attr.label}</Span>
+                <Span>:</Span>
+                <DropDownStyle>
+                  <DropDown
+                    id={attr.label}
+                    onSelect={() => props.onChange}
+                    items={attr.contorls}
+                  />
+                </DropDownStyle>
+              </Depth>
+            );
+          })}
+
           <Span>{`}`}</Span>
         </>
       </CodeBackground>
