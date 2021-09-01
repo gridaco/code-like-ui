@@ -59,61 +59,56 @@ export function Interface(props: InterfaceProps) {
   return (
     <ThemeProvider theme={Monokai_Test}>
       <CodeBackground>
-        <Span>interface</Span>
-
         <>
-          {/* <Span className="keyword">interface</Span>
-        <StyledInput
-          size={inputSize}
-          defaultValue={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-        />
-        <Span>{`{`}</Span>
-        <Depth level={1}>
-          <Span>coverImage</Span>
-          <Span>:</Span>
-          <DropDownStyle>
-            <DropDown
-              id="coverImage"
-              onSelect={() => props.onChange}
-              items={interface_test_options}
-            />
-          </DropDownStyle>
-        </Depth>
-        <Depth level={1}>
-          <Span>content</Span>
-          <Span>:</Span>
-          <DropDownStyle>
-            <DropDown
-              id="content"
-              onSelect={() => props.onChange}
-              items={interface_test_options}
-            />
-          </DropDownStyle>
-        </Depth>
-        <Depth level={1}>
-          <Span>buttonText</Span>
-          <Span>:</Span>
-          <DropDownStyle>
-            <DropDown
-              id="buttonText"
-              onSelect={() => props.onChange}
-              items={interface_test_options}
-            />
-          </DropDownStyle>
-        </Depth>
-        <Depth level={1}>
-          <Span>onClick</Span>
-          <Span>:</Span>
-          <DropDownStyle>
-            <DropDown
-              id="onClick"
-              onSelect={() => props.onChange}
-              items={interface_evnet_options}
-            />
-          </DropDownStyle>
-        </Depth>
-        <Span>{`}`}</Span> */}
+          <Span className="keyword">interface</Span>
+
+          <Input value={props.interfaceName} onChange={props.onChange} />
+          <Span>{`{`}</Span>
+          <Depth level={1}>
+            <Span>coverImage</Span>
+            <Span>:</Span>
+            <DropDownStyle>
+              <DropDown
+                id="coverImage"
+                onSelect={() => props.onChange}
+                items={interface_test_options}
+              />
+            </DropDownStyle>
+          </Depth>
+          <Depth level={1}>
+            <Span>content</Span>
+            <Span>:</Span>
+            <DropDownStyle>
+              <DropDown
+                id="content"
+                onSelect={() => props.onChange}
+                items={interface_test_options}
+              />
+            </DropDownStyle>
+          </Depth>
+          <Depth level={1}>
+            <Span>buttonText</Span>
+            <Span>:</Span>
+            <DropDownStyle>
+              <DropDown
+                id="buttonText"
+                onSelect={() => props.onChange}
+                items={interface_test_options}
+              />
+            </DropDownStyle>
+          </Depth>
+          <Depth level={1}>
+            <Span>onClick</Span>
+            <Span>:</Span>
+            <DropDownStyle>
+              <DropDown
+                id="onClick"
+                onSelect={() => props.onChange}
+                items={interface_evnet_options}
+              />
+            </DropDownStyle>
+          </Depth>
+          <Span>{`}`}</Span>
         </>
       </CodeBackground>
 
