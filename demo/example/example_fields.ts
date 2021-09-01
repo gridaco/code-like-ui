@@ -3,7 +3,7 @@ import {
   InterfaceAttr,
   InterfaceFieldProps,
   InterfaceTypeOption,
-} from '../../packages/interface/lib/type';
+} from '@code-ui/interface/lib/type';
 
 export const docstring_lang_field: IField = {
   tag: '@',
