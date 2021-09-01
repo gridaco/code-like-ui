@@ -1,4 +1,10 @@
-import { LanguageConfig, Option, ExpandableConfig } from "@code-ui/core";
+import { LanguageConfig, ExpandableConfig } from "@code-ui/core";
+
+export interface Option<T> {
+  name: string;
+  value: T;
+  description?: string;
+}
 export interface IField<T = string> {
   tag?: "@";
   name: string;
