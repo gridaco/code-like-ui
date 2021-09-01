@@ -40,11 +40,17 @@ export function Field(props: IField) {
 
   const _fieldArray = fieldArray.filter((fieldArray) => fieldArray !== "");
 
+  // step!
+  // 1. check contorl token -> if contorl token: handle and return <Drop or <Input ~ like this
+  // 2. check static token -> if contorl token: handle and return <span style={{}} ~
+  // 3. if nothing -> <span>field</span>
   _fieldArray.map((field, index) => {
     if (field === CONTORL) {
       ContorlTokenHandle();
     } else if (field === STATIC) {
       StaticTokenHandle();
+    } else {
+      return <span>{field}</span>;
     }
   });
 
