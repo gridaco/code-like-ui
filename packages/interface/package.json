@@ -1,6 +1,6 @@
 {
   "name": "@code-ui/interface",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": "https://github.com/gridaco/code-like-ui/tree/main/packages/interface",
   "homepage": "https://github.com/gridaco/code-like-ui",
   "author": "Grida.co",
@@ -17,8 +17,7 @@
   },
   "dependencies": {
     "@code-ui/color-scheme": "0.0.0",
-    "@code-ui/core": "^0.0.0",
-    "@code-ui/token": "^0.0.2",
+    "@code-ui/core": "^0.0.1",
     "@emotion/react": "^11.4.1"
   },
   "devDependencies": {
