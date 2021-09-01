@@ -6,6 +6,8 @@ import React from 'react';
 import {
   docstring_lang_field,
   docstring_platform_field,
+  interfaceAttr1,
+  interfaceAttr2,
   interface_field,
   interface_property_Field,
 } from '../example/example_fields';
@@ -27,8 +29,9 @@ export default function Home() {
         <Interface
           lang={'js'}
           theme={'monokai'}
-          fields={[interface_field, interface_property_Field]}
           onChange={handleClick}
+          interfaceName={'Props'}
+          attr={[interfaceAttr1, interfaceAttr2]}
         />
         <Docstring
           lang="dart" // defaults to js - "js" | "dart" | "paython" | LanguageConfig
