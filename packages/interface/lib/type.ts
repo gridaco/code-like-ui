@@ -1,7 +1,7 @@
 import { Monokai, ThemeType } from "@code-ui/color-scheme";
 import { DropDown, Input } from "@code-ui/token";
 
-import { ExpandableConfig, AddFieldConfig } from "@code-ui/type";
+import { ExpandableConfig, AddFieldConfig } from "@code-ui/core";
 
 export interface InterfaceOption {
   name: string;

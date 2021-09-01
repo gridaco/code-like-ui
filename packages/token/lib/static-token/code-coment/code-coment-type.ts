@@ -1,4 +1,4 @@
-import { LanguageConfig } from "@code-ui/type";
+import { LanguageConfig } from "@code-ui/core";
 
 export const jsstyle: LanguageConfig = {
   docstring: {

@@ -9,7 +9,7 @@ import {
 } from "./type";
 import { Line, CodeWrapper, Monokai, Link } from "./style";
 import { ThemeProvider } from "@emotion/react";
-import { LanguageConfig } from "@code-ui/type";
+import { LanguageConfig } from "@code-ui/core";
 
 export const Docstring = (props: CodeLikeViewProps) => {
   const expandableConfig = props?.expandableConfig;
