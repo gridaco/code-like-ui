@@ -1,6 +1,6 @@
 {
   "name": "@code-ui/token",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": "https://github.com/gridaco/code-like-ui/tree/main/packages/interface",
   "homepage": "https://github.com/gridaco/code-like-ui",
   "author": "Grida.co",
@@ -30,8 +30,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@tippyjs/react": "^4.2.5",
-    "handlebars": "^4.7.7"
+    "@tippyjs/react": "^4.2.5"
   },
   "files": [
     "README.md",
