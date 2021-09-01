@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import React, { useCallback, useState } from "react";
+import React, { Fragment, useCallback, useState } from "react";
 import { IDropDown } from "./menu-type";
 import Tippy from "@tippyjs/react";
 // import { Option } from "../field/type";
@@ -58,9 +58,8 @@ export const DropDown = (props: IDropDown) => {
           <Options onKeyUp={(event) => controlKeyComand(event)}>
             {props.items.map((item, index) => {
               return (
-                <>
+                <Fragment key={`select-box-${props.id}-${item.value}`}>
                   <FieldWrapper
-                    key={`select-box-${props.id}-${item.value}`}
                     id={item.value}
                     onClick={() => handleItem(item.value)}
                     className={
@@ -70,7 +69,7 @@ export const DropDown = (props: IDropDown) => {
                     {item.name}
                     <Desc>{item.description}</Desc>
                   </FieldWrapper>
-                </>
+                </Fragment>
               );
             })}
           </Options>

@@ -47,7 +47,7 @@ export const Docstring = (props: CodeLikeViewProps) => {
         />
         {props.controls.map((field, i) => {
           return (
-            <Line>
+            <Line key={`line-number-${i}`}>
               <CodeComent
                 docstring={langconfig.docstring.mid}
                 indent={langconfig.indent.mid}
