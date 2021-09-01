@@ -1,5 +1,4 @@
 import React from "react";
-import Handlebars from "handlebars";
 import { InterfaceFieldProps } from "../type";
 import { ContorlTokenHandle, StaticTokenHandle } from "@code-ui/token";
 
