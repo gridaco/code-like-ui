@@ -1,6 +1,6 @@
 {
   "name": "@code-ui/interface",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": "https://github.com/gridaco/code-like-ui/tree/main/packages/interface",
   "homepage": "https://github.com/gridaco/code-like-ui",
   "author": "Grida.co",
@@ -15,10 +15,12 @@
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
-  "devDependencies": {
+  "dependencies": {
     "@code-ui/color-scheme": "0.0.0",
-    "@code-ui/token": "0.0.0",
-    "@code-ui/core": "0.0.0",
+    "@code-ui/core": "^0.0.0",
+    "@emotion/react": "^11.4.1"
+  },
+  "devDependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@types/react": "^17.0.16",
@@ -38,9 +40,5 @@
     "dist/index.d.ts",
     "dist/**/*.d.ts",
     "dist/**/*.js"
-  ],
-  "dependencies": {
-    "@emotion/react": "^11.4.1",
-    "handlebars": "^4.7.7"
-  }
+  ]
 }
