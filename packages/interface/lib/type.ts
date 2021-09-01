@@ -19,6 +19,22 @@ export interface IToken {
   };
 }
 
+type KindOfType =
+  | "enum"
+  | "string"
+  | "TypeAlias"
+  | "number"
+  | "bool"
+  | "type"
+  | "any"
+  | "widget";
+interface InterfaceAttr {
+  label: string;
+  type: KindOfType;
+}
+
+export type LanguageType = "js" | "dart" | "paython";
+
 export interface InterfaceFieldProps {
   tag: "@" | "";
   name?: string;
@@ -27,13 +43,21 @@ export interface InterfaceFieldProps {
   token?: IToken;
 }
 
+// export interface InterfaceProps<T = string> {
+//   lang?: LanguageType; // default 'js'
+//   theme?: ThemeType; // monokai
+//   fields: InterfaceFieldProps[];
+//   expandableConfig?: ExpandableConfig;
+//   addFieldConfig?: AddFieldConfig;
+//   onChange: (field: string, value: T) => void; // fix it!
+// }
+
 export interface InterfaceProps<T = string> {
   lang?: LanguageType; // default 'js'
   theme?: ThemeType; // monokai
-  fields: InterfaceFieldProps[];
+  interfaceName: string;
+  attr: InterfaceAttr[];
   expandableConfig?: ExpandableConfig;
   addFieldConfig?: AddFieldConfig;
   onChange: (field: string, value: T) => void; // fix it!
 }
-
-export type LanguageType = "js" | "dart" | "paython";
