@@ -1,5 +1,9 @@
 import { IField } from '@code-ui/docstring';
-import { InterfaceFieldProps } from '../../packages/interface/lib/type';
+import {
+  InterfaceAttr,
+  InterfaceFieldProps,
+  InterfaceTypeOption,
+} from '../../packages/interface/lib/type';
 
 export const docstring_lang_field: IField = {
   tag: '@',
@@ -71,4 +75,27 @@ export const interface_property_Field: InterfaceFieldProps = {
       options: interface_test_options,
     },
   },
+};
+
+export const interface_attr_test_options: InterfaceTypeOption[] = [
+  {
+    name: 'string',
+    value: 'string',
+    description: 'string',
+  },
+  {
+    name: 'enum',
+    value: 'enum',
+    description: 'enum',
+  },
+];
+
+export const interfaceAttr1: InterfaceAttr = {
+  label: 'coverImage',
+  contorls: interface_attr_test_options,
+};
+
+export const interfaceAttr2: InterfaceAttr = {
+  label: 'content',
+  contorls: interface_attr_test_options,
 };

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Monokai, ThemeType } from "@code-ui/color-scheme";
+import { Monokai, Monokai_Test, ThemeType } from "@code-ui/color-scheme";
 import { DropDown, Input } from "@code-ui/token";
 import { ThemeProvider } from "@emotion/react";
 import { InterfaceProps, InterfaceFieldProps } from "./type";
@@ -31,17 +31,38 @@ const interface_evnet_options = [
     description: "arrowFunctionString",
   },
 ];
+
+type KindOfType =
+  | "enum"
+  | "string"
+  | "TypeAlias"
+  | "number"
+  | "bool"
+  | "type"
+  | "any"
+  | "widget";
+interface InterfaceAttr {
+  label: string;
+  type: KindOfType;
+}
+
 export function Interface(props: InterfaceProps) {
-  const { lang, theme, fields, expandableConfig, addFieldConfig } = props;
+  const { lang, theme, interfaceName, attr, expandableConfig, addFieldConfig } =
+    props;
   const [inputValue, setInputValue] = useState("props");
   const [inputSize, setInputSize] = useState(4);
+
   useEffect(() => {
     setInputSize(inputValue.length + 1);
   }, [inputValue]);
+
   return (
-    <ThemeProvider theme={Monokai}>
+    <ThemeProvider theme={Monokai_Test}>
       <CodeBackground>
-        <Span className="keyword">interface</Span>
+        <Span>interface</Span>
+
+        <>
+          {/* <Span className="keyword">interface</Span>
         <StyledInput
           size={inputSize}
           defaultValue={inputValue}
@@ -92,7 +113,8 @@ export function Interface(props: InterfaceProps) {
             />
           </DropDownStyle>
         </Depth>
-        <Span>{`}`}</Span>
+        <Span>{`}`}</Span> */}
+        </>
       </CodeBackground>
 
       {/* {fields.map((field: InterfaceFieldProps, i: number) => {
@@ -136,15 +158,6 @@ const Span = styled.span`
   &.keyword {
     color: #f92672 !important;
   }
-`;
-
-const StyledInput = styled.input`
-  margin-right: 5px;
-  background: #323134;
-  border: 0;
-  outline: none;
-  color: #fff;
-  border-radius: 2px;
 `;
 
 const Depth = styled.div<{ level?: number }>`

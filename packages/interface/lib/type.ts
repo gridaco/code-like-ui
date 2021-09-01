@@ -9,6 +9,12 @@ export interface InterfaceOption {
   description: string;
 }
 
+export interface InterfaceTypeOption {
+  name: string;
+  value: KindOfType;
+  description: string;
+}
+
 export interface IToken {
   static?: {
     keyword: string;
@@ -19,7 +25,7 @@ export interface IToken {
   };
 }
 
-type KindOfType =
+export type KindOfType =
   | "enum"
   | "string"
   | "TypeAlias"
@@ -28,9 +34,11 @@ type KindOfType =
   | "type"
   | "any"
   | "widget";
-interface InterfaceAttr {
+
+export interface InterfaceAttr {
   label: string;
-  type: KindOfType;
+  // type: string;
+  contorls: InterfaceTypeOption[];
 }
 
 export type LanguageType = "js" | "dart" | "paython";

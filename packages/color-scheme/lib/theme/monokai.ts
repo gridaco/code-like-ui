@@ -9,3 +9,19 @@ export const Monokai: ColorTheme = {
   link: { color: "#868686" },
   bg: { color: "#2A2734" },
 };
+
+export const Monokai_Test: any = {
+  default: {
+    background: "#272822",
+    color: "#d4d4d4",
+  },
+  comment: {
+    color: "#75715e",
+  },
+  string: {
+    color: "#e6db74",
+  },
+  keyword: {
+    color: "#f92672",
+  },
+};

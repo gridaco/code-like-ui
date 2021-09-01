@@ -1,3 +1,3 @@
-import { Monokai } from "./monokai";
+import { Monokai, Monokai_Test } from "./monokai";
 
-export { Monokai };
+export { Monokai, Monokai_Test };
