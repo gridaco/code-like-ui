@@ -37,7 +37,7 @@ type KindOfType =
   | "string"
   | "TypeAlias"
   | "number"
-  | "bool"
+  | "boolean"
   | "type"
   | "any"
   | "widget";
@@ -69,7 +69,7 @@ export function Interface(props: InterfaceProps) {
                 <DropDownStyle>
                   <DropDown
                     id={attr.label}
-                    onSelect={() => props.onChange}
+                    onSelect={(d) => props.onChange(attr.label, d)}
                     items={attr.contorls}
                   />
                 </DropDownStyle>
