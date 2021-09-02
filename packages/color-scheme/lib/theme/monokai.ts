@@ -7,12 +7,12 @@ export const Monokai: ColorTheme = {
   },
   comment: { color: "#868686" },
   link: { color: "#868686" },
-  bg: { color: "#2A2734" },
+  bg: { color: "#1E1E1E" },
 };
 
 export const Monokai_Test: any = {
   default: {
-    background: "#272822",
+    background: "#1E1E1E",
     color: "#d4d4d4",
   },
   comment: {
