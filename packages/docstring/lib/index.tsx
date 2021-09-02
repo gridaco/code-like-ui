@@ -7,9 +7,10 @@ import {
   _DEFAULT_DART,
   _DEFAULT_JS_STYLE,
 } from "./type";
-import { Line, CodeWrapper, Monokai, Link } from "./style";
+import { Line, CodeWrapper, Link } from "./style";
 import { ThemeProvider } from "@emotion/react";
 import { LanguageConfig } from "@code-ui/core";
+import { Monokai, MonokaiDocstring } from "@code-ui/color-scheme";
 
 export const Docstring = (props: CodeLikeViewProps) => {
   const expandableConfig = props?.expandableConfig;
@@ -39,7 +40,7 @@ export const Docstring = (props: CodeLikeViewProps) => {
   }
 
   return (
-    <ThemeProvider theme={Monokai}>
+    <ThemeProvider theme={MonokaiDocstring}>
       <CodeWrapper padding={props.padding}>
         <CodeComent
           docstring={langconfig.docstring.start}

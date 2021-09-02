@@ -1,10 +1,9 @@
 import { Theme } from "@emotion/react";
 import styled from "@emotion/styled";
-
-type _Color = string;
+import { DocstringColorTheme } from "@code-ui/color-scheme";
 
 declare module "@emotion/react" {
-  export interface Theme extends DocstringTheme {}
+  export interface Theme extends DocstringColorTheme {}
 }
 
 export interface Props {
@@ -33,23 +32,3 @@ export const Link = styled.div`
   cursor: pointer;
   text-decoration-line: underline;
 `;
-
-interface DocstringTheme {
-  highlight: {
-    text: { color: _Color };
-    bg: { color: _Color };
-  };
-  comment: { color: _Color };
-  link: { color: _Color };
-  bg: { color: _Color };
-}
-
-export const Monokai: DocstringTheme = {
-  highlight: {
-    text: { color: "#D7D7D7" },
-    bg: { color: "#3A3842" },
-  },
-  comment: { color: "#868686" },
-  link: { color: "#868686" },
-  bg: { color: "#2A2734" },
-};
