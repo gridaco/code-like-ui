@@ -88,15 +88,40 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@code-ui/color-scheme@0.0.0":
+"@code-ui/color-scheme@0.0.0", "@code-ui/color-scheme@^0.0.0":
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/@code-ui/color-scheme/-/color-scheme-0.0.0.tgz#9f7b1d32e33193166c2958dec999c9fbf9009c8d"
   integrity sha512-KqxYgHgEZYEqs0+n2wX4cIAo4PpBtsLDHxWJcUdXcYeV9u0cTVQ9qJA/8M+d44L6Hu8sYz+lM7f5q2o3W4hloQ==
 
-"@code-ui/core@0.0.0":
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/@code-ui/core/-/core-0.0.0.tgz#1ded6bfd5ab2ec1f44e40116baa569662a0de60c"
-  integrity sha512-NTFTGyzdEBmyfQR68slWe99D0VvHQWJnl/5KqS+WZfm1bn0C+i5g/ZEKyqyNnF+F755dTF/rMYCs2eZw0Cn0EA==
+"@code-ui/color-scheme@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@code-ui/color-scheme/-/color-scheme-0.0.1.tgz#31d39e8b59c1f01bad92577b1c34cad34f64384d"
+  integrity sha512-JWH7vQT4Ai/yX8UidQB9VDI/V+Si2dmLFGeCO5aD/GBrY6v68IYWmyzqW0MXRqFgE6twvbnAt8g3P5bzpKUwxQ==
+
+"@code-ui/core@0.0.1", "@code-ui/core@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@code-ui/core/-/core-0.0.1.tgz#42d8ecea95ffa90037778a1b8fde537956158181"
+  integrity sha512-YoVyYAYOSwxZnSzs+/uyobth0ixC2p7UvkGrOpUpnTcQr8GP6xqZiC6Tm9iHl8L0SRxiQeRdt9rrLljEMyoaiQ==
+  dependencies:
+    "@code-ui/color-scheme" "^0.0.0"
+    "@code-ui/token" "^0.0.1"
+    handlebars "^4.7.7"
+
+"@code-ui/docstring@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@code-ui/docstring/-/docstring-0.0.11.tgz#917ab165b006c921ca894e3f711fecbe1c36df57"
+  integrity sha512-cgSp2yUfuhx5htUizhXnoO0sspDytrvPbSmUOaSXsR3IWSD10LoSnhBy7jsRuSorOWcNdmkbYQXF6inExspeFA==
+  dependencies:
+    "@code-ui/core" "0.0.1"
+
+"@code-ui/interface@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@code-ui/interface/-/interface-0.0.5.tgz#0b967f91cf648b7c8e1f60891e95031f28783fcc"
+  integrity sha512-PXUeukdmEcqHjFCT19MLlvg60HLN4yFIpJuBHzP4zaBEb2ki7O5gwuREuZzPnrXl3A0NcGfK8xecd/17E4ix7w==
+  dependencies:
+    "@code-ui/color-scheme" "0.0.0"
+    "@code-ui/core" "^0.0.1"
+    "@emotion/react" "^11.4.1"
 
 "@code-ui/token@^0.0.1":
   version "0.0.1"
