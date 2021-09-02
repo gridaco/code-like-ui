@@ -8,8 +8,6 @@ import {
   docstring_platform_field,
   interfaceAttr1,
   interfaceAttr2,
-  interface_field,
-  interface_property_Field,
 } from '../example/example_fields';
 
 export default function Home() {
