@@ -6,42 +6,6 @@ import { InterfaceProps, InterfaceFieldProps, InterfaceAttr } from "./type";
 import { Field } from "./field";
 import styled from "@emotion/styled";
 
-const interface_test_options = [
-  {
-    name: "string",
-    value: "type.string",
-    description: "string",
-  },
-  {
-    name: "enum",
-    value: "type.enum",
-    description: "enum",
-  },
-];
-
-const interface_evnet_options = [
-  {
-    name: "() => void",
-    value: "type.arrowFunction",
-    description: "arrowFunction",
-  },
-  {
-    name: "() => string",
-    value: "type.arrowFunctionString",
-    description: "arrowFunctionString",
-  },
-];
-
-type KindOfType =
-  | "enum"
-  | "string"
-  | "TypeAlias"
-  | "number"
-  | "boolean"
-  | "type"
-  | "any"
-  | "widget";
-
 export function Interface(props: InterfaceProps) {
   const {
     lang,
