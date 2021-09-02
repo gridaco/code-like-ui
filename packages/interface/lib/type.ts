@@ -30,7 +30,7 @@ export type KindOfType =
   | "string"
   | "TypeAlias"
   | "number"
-  | "bool"
+  | "boolean"
   | "type"
   | "any"
   | "widget";
