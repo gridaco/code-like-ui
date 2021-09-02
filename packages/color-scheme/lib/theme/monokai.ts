@@ -1,6 +1,6 @@
-import { ColorTheme } from "../type";
+import { DocstringColorTheme, KindOfTheme } from "../type";
 
-export const Monokai: ColorTheme = {
+export const MonokaiDocstring: DocstringColorTheme = {
   highlight: {
     text: { color: "#D7D7D7" },
     bg: { color: "#3A3842" },
@@ -10,9 +10,9 @@ export const Monokai: ColorTheme = {
   bg: { color: "#1E1E1E" },
 };
 
-export const Monokai_Test: any = {
+export const Monokai: KindOfTheme = {
   default: {
-    background: "#1E1E1E",
+    bg: "#414339",
     color: "#d4d4d4",
   },
   comment: {
@@ -21,7 +21,23 @@ export const Monokai_Test: any = {
   string: {
     color: "#e6db74",
   },
+  number: {
+    color: "#ae81ff",
+  },
+  chatacter: {
+    color: "#ae81ff",
+  },
   keyword: {
     color: "#f92672",
+  },
+  type: {
+    color: "#66d9ef",
+    fontStyle: "italic",
+  },
+  function: {
+    color: "#a6e22e",
+  },
+  parameter: {
+    color: "#fd971f",
   },
 };
