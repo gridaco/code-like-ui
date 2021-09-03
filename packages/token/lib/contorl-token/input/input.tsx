@@ -21,7 +21,8 @@ export const Input = (props: InputPrpps) => {
 
   function inputOnChagne(value: string) {
     setInputValue(value);
-    props.onChange("interfaceName", value);
+    // Don't change this static!
+    props.onChange("static.input.value", value);
   }
 
   return (

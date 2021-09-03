@@ -10,7 +10,7 @@ import {
 import { Line, CodeWrapper, Link } from "./style";
 import { ThemeProvider } from "@emotion/react";
 import { LanguageConfig } from "@code-ui/core";
-import { Monokai, MonokaiDocstring } from "@code-ui/color-scheme";
+import { MonokaiDocstring } from "@code-ui/color-scheme";
 
 export const Docstring = (props: CodeLikeViewProps) => {
   const expandableConfig = props?.expandableConfig;

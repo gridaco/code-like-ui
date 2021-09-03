@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Monokai, Monokai_Test, ThemeType } from "@code-ui/color-scheme";
+import { Monokai, ThemeType, MonokaiDocstring } from "@code-ui/color-scheme";
 import { DropDown, Input } from "@code-ui/token";
 import { ThemeProvider } from "@emotion/react";
 import { InterfaceProps, InterfaceFieldProps, InterfaceAttr } from "./type";
@@ -18,7 +18,7 @@ export function Interface(props: InterfaceProps) {
   const [inputValue, setInputValue] = useState("props");
 
   return (
-    <ThemeProvider theme={Monokai_Test}>
+    <ThemeProvider theme={MonokaiDocstring}>
       <CodeBackground>
         <>
           <Span className="keyword">interface</Span>
