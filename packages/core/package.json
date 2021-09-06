@@ -16,7 +16,7 @@
     "react-dom": "17.0.2"
   },
   "dependencies": {
-    "@code-ui/color-scheme": "^0.0.1",
+    "@code-ui/color-scheme": "^0.0.1-beta",
     "@code-ui/token": "^0.0.2-beta",
     "handlebars": "^4.7.7"
   },
