@@ -1,7 +1,7 @@
 {
-  "name": "@code-ui/docstring",
-  "version": "0.0.11-beta",
-  "repository": "https://github.com/gridaco/code-like-ui/tree/main/packages/docstring",
+  "name": "@code-ui/color-scheme",
+  "version": "0.0.1-beta",
+  "repository": "https://github.com/gridaco/code-like-ui/tree/main/packages/interface",
   "homepage": "https://github.com/gridaco/code-like-ui",
   "author": "Grida.co",
   "license": "Apache 2.0",
@@ -15,12 +15,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
-  "dependencies": {
-    "@code-ui/core": "0.0.1-beta"
-  },
   "devDependencies": {
-    "@emotion/react": "^11.4.1",
-    "@emotion/styled": "^11.3.0",
     "@types/react": "^17.0.16",
     "@types/react-dom": "^17.0.9",
     "eslint": "7.32.0",

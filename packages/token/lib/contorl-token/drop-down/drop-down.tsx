@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
-import React, { useCallback, useState } from "react";
+import React, { Fragment, useCallback, useState } from "react";
 import { IDropDown } from "./menu-type";
 import Tippy from "@tippyjs/react";
-import { Option } from "../field/type";
+// import { Option } from "../field/type";
 
-const DropMenu = (props: IDropDown) => {
+export const DropDown = (props: IDropDown) => {
   const [item, setItme] = useState<string>(props.items[0].value);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -58,9 +58,8 @@ const DropMenu = (props: IDropDown) => {
           <Options onKeyUp={(event) => controlKeyComand(event)}>
             {props.items.map((item, index) => {
               return (
-                <>
+                <Fragment key={`select-box-${props.id}-${item.value}`}>
                   <FieldWrapper
-                    key={`select-box-${props.id}-${item.value}`}
                     id={item.value}
                     onClick={() => handleItem(item.value)}
                     className={
@@ -70,7 +69,7 @@ const DropMenu = (props: IDropDown) => {
                     {item.name}
                     <Desc>{item.description}</Desc>
                   </FieldWrapper>
-                </>
+                </Fragment>
               );
             })}
           </Options>
@@ -91,8 +90,10 @@ type OptionsProps = {
 const Wrapper = styled.div`
   width: fit-content;
   overflow-y: auto;
-  background: ${(props) => props.theme.highlight.bg.color};
-  color: ${(props) => props.theme.highlight.text.color};
+
+  // Temporarily fixed until theme is modified
+  background: #3a3842;
+  color: #d7d7d7;
   border-radius: 2px;
 `;
 
@@ -136,4 +137,4 @@ const Desc = styled.span`
   float: right;
 `;
 
-export default DropMenu;
+export default DropDown;

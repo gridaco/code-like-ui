@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import { IField } from "./type";
 import styled from "@emotion/styled";
-import DropDown from "../drop-down";
 import Handlebars from "handlebars";
+import { DropDown } from "@code-ui/token";
+import { IField } from "../type";
 
-const valuefield = /{{\s?options\s?}}/;
+const valueField = /{{\s?options\s?}}/;
 
-
-const defaulttemplate = "{{tag}}{{name}} {{ options }}";
+const defaultTemplate = "{{tag}}{{name}} {{ options }}";
 
 interface Props<T = string> {
   field: IField;
@@ -15,9 +14,9 @@ interface Props<T = string> {
 }
 
 const field = (props: Props) => {
-  const template = props.field.template ?? defaulttemplate;
+  const template = props.field.template ?? defaultTemplate;
   const field = props.field;
-  const _splits = template.split(valuefield);
+  const _splits = template.split(valueField);
   const __splits_1 = _splits[0];
   const __splits_3 = _splits[1];
   const _1 =
@@ -35,19 +34,19 @@ const field = (props: Props) => {
       ...props.field,
     });
 
-    
   return (
     <Wrapper>
       {_1 && <Tag>{_1}</Tag>}
       &nbsp;
-      {_2  && field.options && 
-      <DropDown
-        id={field.name}
-        items={field.options}
-        onSelect={(d) => {
-          props.onChange(field.name, d);
-        }}
-      />}
+      {_2 && field.options && (
+        <DropDown
+          id={field.name}
+          items={field.options}
+          onSelect={(d) => {
+            props.onChange(field.name, d);
+          }}
+        />
+      )}
       &nbsp;
       {_3 && <Label>{_3}</Label>}
     </Wrapper>
