@@ -88,23 +88,30 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@code-ui/color-scheme@0.0.0", "@code-ui/color-scheme@^0.0.0":
+"@code-ui/color-scheme@0.0.1-beta":
+  version "0.0.2"
+
+"@code-ui/color-scheme@^0.0.0":
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/@code-ui/color-scheme/-/color-scheme-0.0.0.tgz#9f7b1d32e33193166c2958dec999c9fbf9009c8d"
   integrity sha512-KqxYgHgEZYEqs0+n2wX4cIAo4PpBtsLDHxWJcUdXcYeV9u0cTVQ9qJA/8M+d44L6Hu8sYz+lM7f5q2o3W4hloQ==
 
-"@code-ui/color-scheme@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@code-ui/color-scheme/-/color-scheme-0.0.1.tgz#31d39e8b59c1f01bad92577b1c34cad34f64384d"
-  integrity sha512-JWH7vQT4Ai/yX8UidQB9VDI/V+Si2dmLFGeCO5aD/GBrY6v68IYWmyzqW0MXRqFgE6twvbnAt8g3P5bzpKUwxQ==
-
-"@code-ui/core@0.0.1":
+"@code-ui/core@^0.0.1-beta":
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@code-ui/core/-/core-0.0.1.tgz#42d8ecea95ffa90037778a1b8fde537956158181"
   integrity sha512-YoVyYAYOSwxZnSzs+/uyobth0ixC2p7UvkGrOpUpnTcQr8GP6xqZiC6Tm9iHl8L0SRxiQeRdt9rrLljEMyoaiQ==
   dependencies:
     "@code-ui/color-scheme" "^0.0.0"
     "@code-ui/token" "^0.0.1"
+    handlebars "^4.7.7"
+
+"@code-ui/core@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@code-ui/core/-/core-0.0.2.tgz#40ea9c3284e8b33f6c6201f16129707edad22dbf"
+  integrity sha512-uDluALu5H3uh8Qsg7ACnXccaNxwmnXntTlaSWr+R/nXb1LnMJGaO5bBuaw16UbA86DjDz2eWCK1iierdb47KWA==
+  dependencies:
+    "@code-ui/color-scheme" "^0.0.2"
+    "@code-ui/token" "^0.0.2-beta"
     handlebars "^4.7.7"
 
 "@code-ui/token@^0.0.1":
