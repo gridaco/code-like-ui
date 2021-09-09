@@ -6,15 +6,22 @@ import React from 'react';
 import {
   docstring_lang_field,
   docstring_platform_field,
-  interfaceAttr1,
-  interfaceAttr2,
+  interface_attr1,
+  interface_attr2,
+  subbestions_item1,
+  subbestions_item2,
 } from '../example/example_fields';
 import { BasedToken } from '@code-ui/token';
+import { Suggestions } from '@code-ui/completion-provider';
 
 export default function Home() {
   function handleClick(field: string, value: string) {
     console.log(field);
     console.log(value);
+  }
+
+  function suggestionsSelect(id: string) {
+    console.log(`%c selected id is - ${id}`, 'color: red');
   }
 
   return (
@@ -40,12 +47,19 @@ export default function Home() {
           backgroundColor="#3A3842"
           content={<span>hi</span>}
         />
+
+        <Suggestions
+          items={[subbestions_item1, subbestions_item2]}
+          selectedId={'first_id'}
+          onSelected={suggestionsSelect}
+        />
+
         <Interface
           lang={'js'}
           theme={'monokai'}
           onChange={handleClick}
           interfaceName={'Props'}
-          attrs={[interfaceAttr1, interfaceAttr2]}
+          attrs={[interface_attr1, interface_attr2]}
         />
 
         <Docstring

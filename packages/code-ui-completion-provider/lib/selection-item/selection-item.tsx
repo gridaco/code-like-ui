@@ -4,6 +4,7 @@ import { css } from "@emotion/react";
 import { IconState, LeadingIcon } from "../leading-icon";
 
 export interface SelectionItemProps {
+  id: string;
   label: string;
   detail?: string;
   leading?: ReactNode | true;
@@ -14,7 +15,10 @@ export interface SelectionItemProps {
 
 export function SelectionItem(props: SelectionItemProps) {
   return (
-    <Wrapper variant={props.variant} onClick={() => props.onFocus(props.label)}>
+    <Wrapper
+      variant={props.variant}
+      onMouseOver={() => props.onFocus(props.id)}
+    >
       <InnerWrapper>
         {/* checking more then */}
         {props.leading === true ? (
@@ -35,6 +39,7 @@ const Wrapper = styled.div<{ variant?: string }>`
   flex-direction: row;
   justify-content: space-between;
   padding: 2px 8px;
+  cursor: default;
 
   ${(props) =>
     props.variant === "focused"
