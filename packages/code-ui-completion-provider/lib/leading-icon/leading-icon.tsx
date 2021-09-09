@@ -5,7 +5,7 @@ import { css } from "@emotion/react";
 export type IconState = "placeholder" | "empty" | "color";
 
 interface LeadingIconProps {
-  state: IconState;
+  state?: IconState;
   color?: string;
 }
 
@@ -20,6 +20,7 @@ const Wrapper = styled.div<{ state: string; color?: string }>`
   width: 16px;
   height: 16px;
 
+  /* 1. placeholder 2. color 3. empty */
   ${(props) =>
     props.state === "placeholder"
       ? css`

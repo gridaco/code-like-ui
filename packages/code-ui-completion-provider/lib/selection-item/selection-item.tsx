@@ -1,34 +1,61 @@
 import React, { ReactNode } from "react";
 import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 import { IconState, LeadingIcon } from "../leading-icon";
 
 export interface SelectionItemProps {
-  contents: any[];
-
-  state: IconState;
+  label: string;
+  detail?: string;
+  leading?: IconState;
+  documentation?: (ReactNode | string)[];
+  variant?: "default" | "focused" | "selected";
 }
 
 export function SelectionItem(props: SelectionItemProps) {
   return (
-    <Wrapper>
+    <Wrapper variant={props.variant}>
       <InnerWrapper>
-        <LeadingIcon state={props.state} />
+        <LeadingIcon state={props.leading} />
+
+        <Label>{props.label}</Label>
       </InnerWrapper>
-      <Desc></Desc>
+      <Desc>{props.detail}</Desc>
     </Wrapper>
   );
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<{ variant?: string }>`
   display: flex;
-  background-color: #252526; // will be set theme
-  padding: 0 8px;
-  color: #b7b7b7; // will be set theme
-  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
-  border: 1px solid #393939; // will be set theme
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2px 8px;
+
+  ${(props) =>
+    props.variant === "focused"
+      ? css`
+          background-color: #828282;
+        `
+      : props.variant === "selected"
+      ? css`
+          background-color: #828282;
+        `
+      : css`
+          &:hover {
+            background-color: #333333;
+          }
+        `}
 `;
 
-const InnerWrapper = styled.div``;
+const InnerWrapper = styled.div`
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+`;
 
-const Desc = styled.div``;
+const Label = styled.span`
+  color: #fff;
+`;
+
+const Desc = styled.div`
+  color: #bcbcbc;
+`;
