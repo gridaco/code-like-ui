@@ -7,14 +7,22 @@ interface HoverViewContentBoxProps {
 }
 
 export function HoverViewContentBox(props: HoverViewContentBoxProps) {
-  return <Wrapper>{props.content}</Wrapper>;
+  return (
+    <Wrapper>
+      <Content>{props.content}</Content>
+    </Wrapper>
+  );
 }
 
 const Wrapper = styled.div`
   width: 100%;
   border-bottom: 1px solid #393939;
+  cursor: default;
 
   &:last-child {
     border-bottom: none;
   }
+`;
+const Content = styled.div`
+  padding: 0 6px;
 `;

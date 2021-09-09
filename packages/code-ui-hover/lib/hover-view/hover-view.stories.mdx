@@ -1,0 +1,31 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { HoverView } from "./hover-view";
+
+<Meta title="code-ui-hover/hover-view" />
+
+~
+
+# Preview
+
+<Preview>
+  <Story name="default">
+    default
+    <HoverView contents={["text", "text"]} />
+  </Story>
+  <Story name="content is image">
+    <HoverView
+      contents={[
+        "text",
+        <>
+          accept color data as property and display it to
+          <br />
+          <a href="/">“layer1”.fills[0].color</a>
+        </>,
+      ]}
+    />
+  </Story>
+</Preview>
+
+# Props
+
+<Props of={BasedToken} />
