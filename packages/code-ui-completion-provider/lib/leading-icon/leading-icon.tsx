@@ -19,12 +19,14 @@ export function LeadingIcon(props: LeadingIconProps) {
 const Wrapper = styled.div<{ state: string; color?: string }>`
   width: 16px;
   height: 16px;
+  margin-right: 4px;
 
   /* 1. placeholder 2. color 3. empty */
+
   ${(props) =>
     props.state === "placeholder"
       ? css`
-          background-color: linear-gradient(
+          background: linear-gradient(
             132.44deg,
             #c4c4c4 -4.9%,
             rgba(196, 196, 196, 0) 100%
@@ -32,7 +34,8 @@ const Wrapper = styled.div<{ state: string; color?: string }>`
         `
       : props.state === "color"
       ? css`
-          background-color: ${props.color};
+          // FIXME: fix issue that color hanlding is not working
+          /* background-color: ${props.color}; */
         `
       : css`
           background-color: rgba(255, 255, 255, 0);

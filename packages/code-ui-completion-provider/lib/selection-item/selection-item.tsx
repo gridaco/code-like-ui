@@ -9,16 +9,18 @@ export interface SelectionItemProps {
   leading?: ReactNode | true;
   documentation?: (ReactNode | string)[];
   variant?: "default" | "focused" | "selected";
+  onFocus: (id: string) => void;
 }
 
 export function SelectionItem(props: SelectionItemProps) {
   return (
-    <Wrapper variant={props.variant}>
+    <Wrapper variant={props.variant} onClick={() => props.onFocus(props.label)}>
       <InnerWrapper>
+        {/* checking more then */}
         {props.leading === true ? (
           <LeadingIcon state="empty" />
         ) : (
-          props.documentation
+          <>{props.leading}</>
         )}
 
         <Label>{props.label}</Label>
@@ -54,6 +56,8 @@ const InnerWrapper = styled.div`
   width: fit-content;
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 `;
 
 const Label = styled.span`

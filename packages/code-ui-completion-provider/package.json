@@ -33,5 +33,8 @@
     "dist/index.d.ts",
     "dist/**/*.d.ts",
     "dist/**/*.js"
-  ]
+  ],
+  "dependencies": {
+    "@tippyjs/react": "^4.2.5"
+  }
 }

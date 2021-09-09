@@ -1,7 +1,8 @@
 import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
 import { SelectionItem } from "./selection-item";
+import { LeadingIcon } from "../leading-icon";
 
-<Meta title="code-ui-completion-provider/hover-view" />
+<Meta title="code-ui-completion-provider/selection-item" />
 
 Views that appear as tooltips when hovered
 
@@ -9,16 +10,27 @@ Views that appear as tooltips when hovered
 
 <Preview>
   <Story name="default">
-    <SelectionItem label="gu" detail="u" />
+    <SelectionItem label="default label" detail="detail" />
+  </Story>
+  <Story name="default - has leading true">
+    <SelectionItem label="default label" detail="detail" leading={true} />
   </Story>
   <Story name="focused">
-    <SelectionItem label="gu" detail="u" variant="focused" />
+    <SelectionItem label="focused label" detail="detail" variant="focused" />
+  </Story>
+  <Story name="focused - has leading(placeholder)">
+    <SelectionItem
+      label="focused label"
+      detail="detail"
+      variant="focused"
+      leading={<LeadingIcon state="placeholder" />}
+    />
   </Story>
   <Story name="selected">
-    <SelectionItem label="gu" detail="u" variant="selected" />
+    <SelectionItem label="selected label" detail="detial" variant="selected" />
   </Story>
 </Preview>
 
 # Props
 
-<Props of={BasedToken} />
+<Props of={SelectionItem} />
