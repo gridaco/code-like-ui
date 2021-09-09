@@ -1,6 +1,7 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Styled from "@emotion/styled";
 import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 interface BasedTokenProps {
   onClick: () => void;
@@ -11,39 +12,46 @@ interface BasedTokenProps {
   contentPadding: number;
   contentColor: string;
   backgroundColor: string;
-  content: any;
+  content: ReactNode;
 }
 
 // Can I get number array to cornerRadius and contentPadding?
 
 export function BasedToken(props: BasedTokenProps) {
   return (
-    <StyleWrapper cornerRadius={props.cornerRadius}>
+    <>
       <HoverOverlay
         onClick={props.onClick}
         onDoubleClick={props.onDoubleClick}
         onHover={props.onHover}
         hoverOverlayColor={props.hoverOverlayColor}
+        cornerRadius={props.cornerRadius}
       >
-        <Background bgColor={props.backgroundColor}>
+        <Background
+          bgColor={props.backgroundColor}
+          cornerRadius={props.cornerRadius}
+        >
           <Content color={props.contentColor} padding={props.contentPadding}>
             {props.content}
           </Content>
         </Background>
       </HoverOverlay>
-    </StyleWrapper>
+    </>
   );
 }
-
-const StyleWrapper = styled.div<{ cornerRadius: number }>`
-  border-radius: ${(props) => `${props.cornerRadius}px`};
-`;
 
 const HoverOverlay = styled.div<{
   onHover: boolean;
   hoverOverlayColor: string;
+  cornerRadius: number;
 }>`
-  background-color: ${(props) => props.onHover ?? props.hoverOverlayColor};
+  width: fit-content;
+  border-radius: ${(props) => `${props.cornerRadius}px`};
+  cursor: pointer;
+  &:hover {
+    background-color: ${(props) =>
+      props.onHover ? props.hoverOverlayColor : ""};
+  }
 `;
 
 const Content = styled.div<{ color: string; padding: number }>`
@@ -51,4 +59,7 @@ const Content = styled.div<{ color: string; padding: number }>`
   padding: ${(props) => `${props.padding}px`};
 `;
 
-const Background = styled.div<{ bgColor: string }>``;
+const Background = styled.div<{ bgColor: string; cornerRadius: number }>`
+  background-color: ${(props) => props.bgColor};
+  border-radius: ${(props) => `${props.cornerRadius}px`};
+`;

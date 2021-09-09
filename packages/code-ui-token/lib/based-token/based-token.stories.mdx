@@ -1,0 +1,48 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { BasedToken } from "./based-token";
+
+<Meta title="BasedToken" />
+
+Primary workmode selector for navigation.
+
+# Preview
+
+<Preview>
+  <Story name="default">
+    <BasedToken
+      onClick={() => {
+        console.log("onClicked")
+      }}
+      onDoubleClick={() => {
+        console.log("onDoubleClick")
+      }}
+      cornerRadius={2}
+      contentPadding={10}
+      contentColor="#D7D7D7"
+      backgroundColor="#3A3842"
+      content={<p>hi</p>}
+    />
+
+  </Story>
+  <Story name="onHover">
+    <BasedToken
+      onClick={() => {
+        console.log("onClicked")
+      }}
+      onDoubleClick={() => {
+        console.log("onDoubleClick");
+      }}
+      onHover={true}
+      hoverOverlayColor={"rgba(#9DB3FF, 25%)"}
+      cornerRadius={2}
+      contentPadding={10}
+      contentColor="#D7D7D7"
+      backgroundColor="#3A3842"
+      content={<p>hi</p>}
+    />
+  </Story>
+</Preview>
+
+# Props
+
+<Props of={BasedToken} />

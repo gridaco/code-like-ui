@@ -9,6 +9,7 @@ import {
   interfaceAttr1,
   interfaceAttr2,
 } from '../example/example_fields';
+import { BasedToken } from '@code-ui/token';
 
 export default function Home() {
   function handleClick(field: string, value: string) {
@@ -24,6 +25,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
+        <BasedToken
+          onClick={() => {
+            console.log('onClicked');
+          }}
+          onDoubleClick={() => {
+            console.log('onDoubleClick');
+          }}
+          onHover={true}
+          hoverOverlayColor={'#9DB3FF'}
+          cornerRadius={2}
+          contentPadding={2}
+          contentColor="#D7D7D7"
+          backgroundColor="#3A3842"
+          content={<span>hi</span>}
+        />
         <Interface
           lang={'js'}
           theme={'monokai'}
@@ -31,6 +47,7 @@ export default function Home() {
           interfaceName={'Props'}
           attrs={[interfaceAttr1, interfaceAttr2]}
         />
+
         <Docstring
           lang="dart" // defaults to js - "js" | "dart" | "paython" | LanguageConfig
           theme={'monokai'} // default style = monokai
