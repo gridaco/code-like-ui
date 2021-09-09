@@ -62,6 +62,7 @@ export function Suggestions(props: SuggestionsProps) {
         placement="bottom-start"
         content={TippyContent()}
         width={sugWidth}
+        max-width={"100%"}
       >
         <Wrapper ref={sugRef}>
           <>
@@ -99,8 +100,8 @@ const Wrapper = styled.div`
 `;
 
 const StyledTippy = styled(Tippy)<{ width: number }>`
-  /* width: ${(props) => `${props.width}px`}; */
+  // 2px is border size
+  width: ${(props) => `${Math.floor(props.width) - 2}px`};
   pointer-events: auto !important;
-  width: 193px;
   transform: translate3d(0, -10px, 0px);
 `;
