@@ -24,8 +24,7 @@ export default function Home() {
 
   function suggestionsSelect(id: string) {
     setSugSelectedId(id);
-    console.log(id);
-    console.log(`%c selected id is - ${id}`, 'color: red');
+    console.log(`selected id is %c - ${id}`, 'color: red');
   }
 
   return (
@@ -58,7 +57,7 @@ export default function Home() {
           onSelected={suggestionsSelect}
         />
 
-        <Interface
+        {/* <Interface
           lang={'js'}
           theme={'monokai'}
           onChange={handleClick}
@@ -77,7 +76,7 @@ export default function Home() {
             hidable: true,
           }}
           onChange={handleClick}
-        />
+        /> */}
       </body>
     </div>
   );

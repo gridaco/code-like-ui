@@ -23,7 +23,7 @@ export function HoverView(props: HoverViewProps) {
 }
 
 const Wrapper = styled.div`
-  width: fit-content;
+  width: 100%;
   background-color: #252526;
   padding: 4px 0;
   color: #b7b7b7;
