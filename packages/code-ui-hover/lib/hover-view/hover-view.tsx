@@ -29,6 +29,7 @@ const Wrapper = styled.div`
   color: #b7b7b7;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
+  border: 1px solid #393939;
 
   a {
     color: #b7b7b7;
