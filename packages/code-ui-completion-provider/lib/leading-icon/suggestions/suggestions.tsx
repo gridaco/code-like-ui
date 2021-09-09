@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SelectionItem, SelectionItemProps } from "../lib/selection-item";
+import { SelectionItem, SelectionItemProps } from "../../selection-item";
 import styled from "@emotion/styled";
 
 export interface SuggestionItems extends SelectionItemProps {
