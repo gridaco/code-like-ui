@@ -11,7 +11,7 @@
   "dependencies": {
     "@code-ui/docstring": "^0.0.12-beta",
     "@code-ui/interface": "^0.0.5-beta",
-    "@code-ui/completion-provider": "0.0.0",
+    "@code-ui/completion-provider": "0.0.1-beta",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@code-ui/token": "0.0.2-beta",
