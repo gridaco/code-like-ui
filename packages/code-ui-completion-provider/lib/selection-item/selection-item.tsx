@@ -11,6 +11,7 @@ export interface SelectionItemProps {
   documentation?: (ReactNode | string)[];
   variant?: "default" | "focused" | "selected";
   onFocus: (id: string) => void;
+  onSelected: (id: string) => void;
 }
 
 export function SelectionItem(props: SelectionItemProps) {
@@ -18,6 +19,7 @@ export function SelectionItem(props: SelectionItemProps) {
     <Wrapper
       variant={props.variant}
       onMouseOver={() => props.onFocus(props.id)}
+      onClick={() => props.onSelected(props.id)}
     >
       <InnerWrapper>
         {/* checking more then */}
@@ -39,7 +41,7 @@ const Wrapper = styled.div<{ variant?: string }>`
   flex-direction: row;
   justify-content: space-between;
   padding: 2px 8px;
-  cursor: default;
+  cursor: pointer;
 
   ${(props) =>
     props.variant === "focused"

@@ -2,7 +2,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { Docstring } from '@code-ui/docstring';
 import { Interface } from '@code-ui/interface';
-import React from 'react';
+import React, { useState } from 'react';
 import {
   docstring_lang_field,
   docstring_platform_field,
@@ -15,12 +15,16 @@ import { BasedToken } from '@code-ui/token';
 import { Suggestions } from '@code-ui/completion-provider';
 
 export default function Home() {
+  const [sugSelectedId, setSugSelectedId] = useState(subbestions_item1.id);
+
   function handleClick(field: string, value: string) {
     console.log(field);
     console.log(value);
   }
 
   function suggestionsSelect(id: string) {
+    setSugSelectedId(id);
+    console.log(id);
     console.log(`%c selected id is - ${id}`, 'color: red');
   }
 
@@ -50,7 +54,7 @@ export default function Home() {
 
         <Suggestions
           items={[subbestions_item1, subbestions_item2]}
-          selectedId={'first_id'}
+          selectedId={sugSelectedId}
           onSelected={suggestionsSelect}
         />
 

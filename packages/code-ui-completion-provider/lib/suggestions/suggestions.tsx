@@ -46,6 +46,7 @@ export function Suggestions(props: SuggestionsProps) {
               documentation={documentation}
               variant={data.id === props.selectedId ? "selected" : "default"}
               onFocus={onFocusChange}
+              onSelected={props.onSelected}
             />
           );
         })}
