@@ -1146,47 +1146,6 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@code-ui/color-scheme@0.0.1-beta":
-  version "0.0.2"
-
-"@code-ui/color-scheme@^0.0.0":
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/@code-ui/color-scheme/-/color-scheme-0.0.0.tgz#9f7b1d32e33193166c2958dec999c9fbf9009c8d"
-  integrity sha512-KqxYgHgEZYEqs0+n2wX4cIAo4PpBtsLDHxWJcUdXcYeV9u0cTVQ9qJA/8M+d44L6Hu8sYz+lM7f5q2o3W4hloQ==
-
-"@code-ui/core@^0.0.1-beta":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@code-ui/core/-/core-0.0.1.tgz#42d8ecea95ffa90037778a1b8fde537956158181"
-  integrity sha512-YoVyYAYOSwxZnSzs+/uyobth0ixC2p7UvkGrOpUpnTcQr8GP6xqZiC6Tm9iHl8L0SRxiQeRdt9rrLljEMyoaiQ==
-  dependencies:
-    "@code-ui/color-scheme" "^0.0.0"
-    "@code-ui/token" "^0.0.1"
-    handlebars "^4.7.7"
-
-"@code-ui/core@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@code-ui/core/-/core-0.0.2.tgz#40ea9c3284e8b33f6c6201f16129707edad22dbf"
-  integrity sha512-uDluALu5H3uh8Qsg7ACnXccaNxwmnXntTlaSWr+R/nXb1LnMJGaO5bBuaw16UbA86DjDz2eWCK1iierdb47KWA==
-  dependencies:
-    "@code-ui/color-scheme" "^0.0.2"
-    "@code-ui/token" "^0.0.2-beta"
-    handlebars "^4.7.7"
-
-"@code-ui/docstring@^0.0.12":
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/@code-ui/docstring/-/docstring-0.0.12.tgz#8e3b2b3ef67ee7927e564377bd844329278eef42"
-  integrity sha512-1418Jsu5Nk9bzxmHO5YoY1Y4MAFduBzhrd0dIZ1IaDWcLzxsaHxkPyRmj16lt8ThYnhlmcYLH6GzuRk4hXQmkg==
-  dependencies:
-    "@code-ui/core" "^0.0.2"
-
-"@code-ui/token@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@code-ui/token/-/token-0.0.1.tgz#910af77dd7deb310406b40fef62eef9db1e15115"
-  integrity sha512-wKXzAEjIi5zur7En74I1KZBWArkER+aiMHSMxx3uuXzW+gnx3BWtWAqbWmJjDAOjD8WqbwN/frvtidl9M8E3cw==
-  dependencies:
-    "@tippyjs/react" "^4.2.5"
-    handlebars "^4.7.7"
-
 "@discoveryjs/json-ext@^0.5.3":
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.3.tgz#90420f9f9c6d3987f176a19a7d8e764271a2f55d"
