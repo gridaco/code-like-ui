@@ -6,7 +6,7 @@ import { IconState, LeadingIcon } from "../leading-icon";
 export interface SelectionItemProps {
   label: string;
   detail?: string;
-  leading?: IconState;
+  leading?: ReactNode | true;
   documentation?: (ReactNode | string)[];
   variant?: "default" | "focused" | "selected";
 }
@@ -15,7 +15,11 @@ export function SelectionItem(props: SelectionItemProps) {
   return (
     <Wrapper variant={props.variant}>
       <InnerWrapper>
-        <LeadingIcon state={props.leading} />
+        {props.leading === true ? (
+          <LeadingIcon state="empty" />
+        ) : (
+          props.documentation
+        )}
 
         <Label>{props.label}</Label>
       </InnerWrapper>
@@ -58,4 +62,5 @@ const Label = styled.span`
 
 const Desc = styled.div`
   color: #bcbcbc;
+  margin-left: 8px;
 `;
