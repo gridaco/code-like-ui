@@ -1,1 +1,1 @@
-export * from "./hover-view";
+export * from "./leading-icon";
