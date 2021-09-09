@@ -103,18 +103,19 @@ export const interface_attr2: InterfaceAttr = {
   contorls: interface_attr_test_options,
 };
 
-export const subbestions_item_documentation = [<>hi</>, <>hi2</>];
+export const subbestions_item_documentation1 = [<>hi</>, <>hi2</>];
+export const subbestions_item_documentation2 = [<>hi3</>, <>hi4</>];
 
 export const subbestions_item1: SuggestionItems = {
   id: 'first_id',
   label: 'testing label',
   detail: 'testing detail',
-  documentation: subbestions_item_documentation,
+  documentation: subbestions_item_documentation1,
 };
 
 export const subbestions_item2: SuggestionItems = {
   id: 'second_id',
   label: 'testing label',
   detail: 'testing detail',
-  documentation: subbestions_item_documentation,
+  documentation: subbestions_item_documentation2,
 };

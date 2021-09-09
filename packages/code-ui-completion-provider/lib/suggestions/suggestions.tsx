@@ -1,4 +1,4 @@
-import React, { ReactNode, useRef, useState } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 import { SelectionItem, SelectionItemProps } from "../selection-item";
 import styled from "@emotion/styled";
 import { HoverView } from "@code-ui/hover";
@@ -22,7 +22,16 @@ export interface SuggestionsProps {
 export function Suggestions(props: SuggestionsProps) {
   const [showDoc, setShowDoc] = useState<SuggestionItems>(undefined);
   const [isHover, setIsHover] = useState<boolean>(false);
-  const sugRef = useRef();
+  const [sugWidth, setSugWidth] = useState<number>(0);
+  const sugRef = useRef(null);
+
+  useEffect(() => {
+    if (!sugRef.current) {
+      return;
+    } else {
+      setSugWidth(sugRef.current.getBoundingClientRect().width);
+    }
+  }, []); //empty dependency array so it only runs once at render
 
   const onHover = () => setIsHover(true);
   const onLeave = () => {
@@ -41,15 +50,8 @@ export function Suggestions(props: SuggestionsProps) {
   };
 
   function TippyContent() {
-    //     transform: translate3d(0, -10px, 0px);
     if (showDoc) {
       return <HoverView contents={showDoc.documentation} />;
-    }
-  }
-
-  function getWrapperWidth() {
-    if (sugRef.current) {
-      // sugRef.current.offsetWidth;
     }
   }
 
@@ -59,6 +61,7 @@ export function Suggestions(props: SuggestionsProps) {
         visible={isHover}
         placement="bottom-start"
         content={TippyContent()}
+        width={sugWidth}
       >
         <Wrapper ref={sugRef}>
           <>
@@ -95,7 +98,9 @@ const Wrapper = styled.div`
   padding: 4px 0;
 `;
 
-const StyledTippy = styled(Tippy)`
+const StyledTippy = styled(Tippy)<{ width: number }>`
+  /* width: ${(props) => `${props.width}px`}; */
   pointer-events: auto !important;
   width: 193px;
+  transform: translate3d(0, -10px, 0px);
 `;
