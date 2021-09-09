@@ -3,7 +3,7 @@ import { BasedToken } from "./based-token";
 
 <Meta title="code-ui-token/based-token" />
 
-The most commonly used token in @code-ui
+Close or expand button used for global navigation.
 
 # Preview
 
@@ -11,34 +11,33 @@ The most commonly used token in @code-ui
   <Story name="default">
     <BasedToken
       onClick={() => {
-        console.log("onClicked")
+        console.log("onClicked");
       }}
       onDoubleClick={() => {
-        console.log("onDoubleClick")
+        console.log("onDoubleClick");
       }}
       cornerRadius={2}
       contentPadding={10}
       contentColor="#D7D7D7"
       backgroundColor="#3A3842"
-      content={<p>hi</p>}
+      content={<span>hi</span>}
     />
-
   </Story>
   <Story name="onHover">
     <BasedToken
       onClick={() => {
-        console.log("onClicked")
+        console.log("onClicked");
       }}
       onDoubleClick={() => {
         console.log("onDoubleClick");
       }}
       onHover={true}
-      hoverOverlayColor={"rgba(#9DB3FF, 25%)"}
+      hoverOverlayColor={"rgba(#9DB3FF,0.25)"}
       cornerRadius={2}
       contentPadding={10}
       contentColor="#D7D7D7"
       backgroundColor="#3A3842"
-      content={<p>hi</p>}
+      content={<span>hi</span>}
     />
   </Story>
 </Preview>
