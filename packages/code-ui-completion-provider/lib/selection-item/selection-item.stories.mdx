@@ -29,6 +29,14 @@ Views that appear as tooltips when hovered
   <Story name="selected">
     <SelectionItem label="selected label" detail="detial" variant="selected" />
   </Story>
+  <Story name="selected - has leading(color)">
+    <SelectionItem
+      label="selected label"
+      detail="detial"
+      variant="color"
+      leading={<LeadingIcon state="color" color="#ff2" />}
+    />
+  </Story>
 </Preview>
 
 # Props

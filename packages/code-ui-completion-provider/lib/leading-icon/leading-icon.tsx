@@ -10,10 +10,10 @@ interface LeadingIconProps {
 }
 
 export function LeadingIcon(props: LeadingIconProps) {
-  if (props.state === "color" && !!props.color) {
+  if (props.state === "color" && !props.color) {
     throw "has no color in leading icon";
   }
-  return <Wrapper state={props.state}></Wrapper>;
+  return <Wrapper state={props.state} color={props.color}></Wrapper>;
 }
 
 const Wrapper = styled.div<{ state: string; color?: string }>`
@@ -34,8 +34,7 @@ const Wrapper = styled.div<{ state: string; color?: string }>`
         `
       : props.state === "color"
       ? css`
-          // FIXME: fix issue that color hanlding is not working
-          /* background-color: ${props.color}; */
+          background: ${props.color};
         `
       : css`
           background-color: rgba(255, 255, 255, 0);
