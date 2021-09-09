@@ -41,8 +41,8 @@ export function BasedToken(props: BasedTokenProps) {
 }
 
 const HoverOverlay = styled.div<{
-  onHover: boolean;
-  hoverOverlayColor: string;
+  onHover?: boolean;
+  hoverOverlayColor?: string;
   cornerRadius: number;
 }>`
   width: fit-content;
