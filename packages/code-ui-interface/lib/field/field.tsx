@@ -1,6 +1,6 @@
 import React from "react";
 import { InterfaceFieldProps } from "../type";
-import { ContorlTokenHandle } from "@code-ui/token";
+import { ControlTokenHandle } from "@code-ui/token";
 
 const defaultTemplate = "{{tag}}{{name}}{{ static }}{{ contorl.input }}";
 
@@ -45,7 +45,7 @@ export function Field(props: IField) {
   // 3. if nothing -> <span>field</span>
   return _fieldArray.map((d, index) => {
     if (d === CONTORL) {
-      ContorlTokenHandle();
+      ControlTokenHandle();
       return <span>contorl</span>;
     } else if (d === STATIC && !!field.token?.static) {
       return `static token ${field.token.static.keyword}`;
