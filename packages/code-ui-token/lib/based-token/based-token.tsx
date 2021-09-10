@@ -34,7 +34,7 @@ export function BasedToken(props: BasedTokenProps) {
         height: Math.floor(bgRef.current.getBoundingClientRect().height),
       });
     }
-  }, []); //empty dependency array so it only runs once at render
+  }, [props.content]); //empty dependency array so it only runs once at render
 
   const onMouseOver = () => props.onHover(true);
   const onMouseLeave = () => props.onHover(false);
@@ -51,11 +51,14 @@ export function BasedToken(props: BasedTokenProps) {
         size={bgSize}
       >
         <Background
-          ref={bgRef}
           bgColor={props.backgroundColor}
           cornerRadius={props.cornerRadius}
         >
-          <Content color={props.contentColor} padding={props.contentPadding}>
+          <Content
+            ref={bgRef}
+            color={props.contentColor}
+            padding={props.contentPadding}
+          >
             {props.content}
           </Content>
         </Background>
@@ -74,8 +77,8 @@ const HoverOverlay = styled.div<{
   size: { width: number; height: number };
 }>`
   border-radius: ${(props) => `${props.cornerRadius}px`};
-  width: ${(props) => `${props.size.width}px`};
-  height: ${(props) => `${props.size.height}px`};
+  /* width: ${(props) => `${props.size.width}px`}; */
+  /* height: ${(props) => `${props.size.height}px`}; */
 
   /* temp hover state for demo purposes*/
 
@@ -88,7 +91,6 @@ const HoverOverlay = styled.div<{
   }
 
   border: 1px solid rgba(255, 255, 255, 0);
-
   &:focus-within {
     border: 1px solid #524e4e;
   }

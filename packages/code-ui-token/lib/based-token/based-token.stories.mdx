@@ -1,6 +1,7 @@
 import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
 import { BasedToken } from "./based-token";
 import { BasedTokenStorybookExample } from "./based-token-storybook-example";
+import { Input } from "..";
 
 <Meta title="code-ui-token/based-token" />
 
@@ -23,7 +24,19 @@ based-token is most commonly used token
       content={<input />}
     />
   </Story>
-  <Story name="onHover">
+  <Story name="token-interface">
+    <BasedToken
+      onClick={() => {
+        console.log("onClicked");
+      }}
+      onDoubleClick={() => {
+        console.log("onDoubleClick");
+      }}
+      cornerRadius={2}
+      contentPadding={[0, 8]}
+      contentColor="#D7D7D7"
+      content={<>interface</>}
+    />
     <BasedToken
       onClick={() => {
         console.log("onClicked");
@@ -34,13 +47,12 @@ based-token is most commonly used token
       onHover={(isOver) => console.log(isOver)}
       hoverOverlayColor={"rgba(157, 178, 255, 0.25)"}
       cornerRadius={2}
-      contentPadding={10}
-      contentColor="#D7D7D7"
-      backgroundColor="#3A3842"
-      content={<span>hi</span>}
+      contentPadding={[0, 8]}
+      contentColor="#569CD6"
+      content={<>interface</>}
     />
   </Story>
-  <Story name="mixed example">
+  <Story name="interface-id">
     <BasedToken
       onClick={() => {
         console.log("onClicked");
@@ -49,9 +61,24 @@ based-token is most commonly used token
         console.log("onDoubleClick");
       }}
       cornerRadius={2}
-      contentPadding={8}
+      contentPadding={[0, 8]}
+      backgroundColor={"#323134"}
       contentColor="#D7D7D7"
-      content={<BasedTokenStorybookExample />}
+      content={<Input value="props" />}
+    />
+    <BasedToken
+      onClick={() => {
+        console.log("onClicked");
+      }}
+      onDoubleClick={() => {
+        console.log("onDoubleClick");
+      }}
+      onHover={(isOver) => console.log(isOver)}
+      hoverOverlayColor={"rgba(157, 178, 255, 0.25)"}
+      cornerRadius={2}
+      contentPadding={[0, 8]}
+      contentColor="#569CD6"
+      content={<>interface</>}
     />
   </Story>
 </Preview>

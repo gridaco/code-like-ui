@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import React, { Fragment, useCallback, useState } from "react";
-import { BasedToken, CodeComent, DropDown } from "..";
+import { BasedToken, CodeComent, DropDown, Input } from "..";
 import Tippy from "@tippyjs/react";
 
 export function BasedTokenStorybookExample() {
