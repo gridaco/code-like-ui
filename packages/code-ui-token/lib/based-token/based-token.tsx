@@ -49,16 +49,17 @@ export function BasedToken(props: BasedTokenProps) {
         hoverOverlayColor={props.hoverOverlayColor}
         cornerRadius={props.cornerRadius}
         size={bgSize}
-      />
-      <Background
-        ref={bgRef}
-        bgColor={props.backgroundColor}
-        cornerRadius={props.cornerRadius}
       >
-        <Content color={props.contentColor} padding={props.contentPadding}>
-          {props.content}
-        </Content>
-      </Background>
+        <Background
+          ref={bgRef}
+          bgColor={props.backgroundColor}
+          cornerRadius={props.cornerRadius}
+        >
+          <Content color={props.contentColor} padding={props.contentPadding}>
+            {props.content}
+          </Content>
+        </Background>
+      </HoverOverlay>
     </Wrapper>
   );
 }
@@ -75,10 +76,21 @@ const HoverOverlay = styled.div<{
   border-radius: ${(props) => `${props.cornerRadius}px`};
   width: ${(props) => `${props.size.width}px`};
   height: ${(props) => `${props.size.height}px`};
-  position: absolute;
+
+  /* temp hover state for demo purposes*/
 
   &:hover {
     background-color: ${(props) => props.hoverOverlayColor};
+  }
+
+  &:hover::after {
+    display: none;
+  }
+
+  border: 1px solid rgba(255, 255, 255, 0);
+
+  &:focus-within {
+    border: 1px solid #524e4e;
   }
 `;
 
