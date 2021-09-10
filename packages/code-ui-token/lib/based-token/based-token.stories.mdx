@@ -31,7 +31,7 @@ based-token is most commonly used token
       onDoubleClick={() => {
         console.log("onDoubleClick");
       }}
-      onHover={true}
+      onHover={(isOver) => console.log(isOver)}
       hoverOverlayColor={"rgba(157, 178, 255, 0.25)"}
       cornerRadius={2}
       contentPadding={10}

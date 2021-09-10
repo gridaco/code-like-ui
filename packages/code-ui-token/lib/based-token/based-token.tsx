@@ -6,7 +6,7 @@ import { css } from "@emotion/react";
 interface BasedTokenProps {
   onClick: () => void;
   onDoubleClick: () => void;
-  onHover?: () => void;
+  onHover?: (isOver: boolean) => void;
   hoverOverlayColor?: string;
   cornerRadius: number; // if input 10  => 10px
   contentPadding: number;
@@ -36,12 +36,16 @@ export function BasedToken(props: BasedTokenProps) {
     }
   }, []); //empty dependency array so it only runs once at render
 
+  const onMouseOver = () => props.onHover(true);
+  const onMouseLeave = () => props.onHover(false);
+
   return (
     <Wrapper>
       <HoverOverlay
         onClick={props.onClick}
         onDoubleClick={props.onDoubleClick}
-        onMouseOver={props.onHover}
+        onMouseOver={onMouseOver}
+        onMouseLeave={onMouseLeave}
         hoverOverlayColor={props.hoverOverlayColor}
         cornerRadius={props.cornerRadius}
         size={bgSize}
@@ -64,7 +68,6 @@ const Wrapper = styled.div`
 `;
 
 const HoverOverlay = styled.div<{
-  onHover?: boolean;
   hoverOverlayColor?: string;
   cornerRadius: number;
   size: { width: number; height: number };

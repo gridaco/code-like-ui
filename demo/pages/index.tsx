@@ -22,6 +22,10 @@ export default function Home() {
     console.log(value);
   }
 
+  function basedTokenHover(isOver: boolean) {
+    console.log(isOver);
+  }
+
   function suggestionsSelect(id: string) {
     setSugSelectedId(id);
     console.log(`selected id is %c - ${id}`, 'color: red');
@@ -42,8 +46,8 @@ export default function Home() {
           onDoubleClick={() => {
             console.log('onDoubleClick');
           }}
-          onHover={true}
-          hoverOverlayColor={'#9DB3FF'}
+          onHover={basedTokenHover}
+          hoverOverlayColor={'rgba(157, 178, 255, 0.25)'}
           cornerRadius={2}
           contentPadding={2}
           contentColor="#D7D7D7"
