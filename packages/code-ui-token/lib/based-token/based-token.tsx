@@ -76,7 +76,7 @@ const HoverOverlay = styled.div<{
   cornerRadius: number;
   size: { width: number; height: number };
 }>`
-  border-radius: ${(props) => `${props.cornerRadius}px`};
+  border-radius: ${(props) => `${props.cornerRadius + 1}px`};
   /* width: ${(props) => `${props.size.width}px`}; */
   /* height: ${(props) => `${props.size.height}px`}; */
 

@@ -26,47 +26,17 @@ export function BasedTokenStorybookExample() {
   }
 
   return (
-    <Wrapper>
-      <StyledTippy
-        visible={isVisible}
-        onClickOutside={hide}
-        placement={"bottom"}
-        content={
-          <Options>
-            {items.map((item, index) => {
-              return (
-                <Fragment key={`select-box-${item.value}`}>
-                  <FieldWrapper
-                    id={item.value}
-                    onClick={() => handleItem(item.value)}
-                    className={
-                      index === selectedIndex ? "is-selected" : undefined
-                    }
-                  >
-                    {item.name}
-                    <Desc>{item.description}</Desc>
-                  </FieldWrapper>
-                </Fragment>
-              );
-            })}
-          </Options>
-        }
-      >
-        <BasedToken
-          onClick={isVisible ? hide : show}
-          onDoubleClick={() => {
-            console.log("onDoubleClick");
-          }}
-          cornerRadius={2}
-          contentPadding={2}
-          contentColor="#D7D7D7"
-          backgroundColor="#3A3842"
-          content={
-            <Select>{items.find((el) => el.value === item)?.name}</Select>
-          }
-        />
-      </StyledTippy>
-    </Wrapper>
+    <>
+      <DropDown
+        id="dropdown-id"
+        items={items}
+        onSelect={(d) => {
+          (field: string, value: string) => {
+            console.log(field, value);
+          };
+        }}
+      />
+    </>
   );
 }
 const StyledTippy = styled(Tippy)`
