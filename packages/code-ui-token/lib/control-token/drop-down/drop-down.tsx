@@ -53,7 +53,7 @@ export const DropDown = (props: IDropDown) => {
       <StyledTippy
         visible={isVisible}
         onClickOutside={hide}
-        placement={"bottom"}
+        placement={"bottom-start"}
         content={
           <Options onKeyUp={(event) => controlKeyComand(event)}>
             {props.items.map((item, index) => {
@@ -99,6 +99,8 @@ const Wrapper = styled.div`
 
 const StyledTippy = styled(Tippy)`
   pointer-events: auto !important;
+  transform: translate3d(0, -9px, 0);
+  border-radius: 2px;
 `;
 
 const Select = styled.ul`
@@ -111,6 +113,8 @@ const Select = styled.ul`
 
 const Options = styled.div<OptionsProps>`
   background: #3f3c47;
+  border-radius: 2px;
+  padding: 4px 0;
 `;
 
 const FieldWrapper = styled.li`
