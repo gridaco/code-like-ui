@@ -12,7 +12,7 @@ export interface SelectionItemProps {
   variant?: "default" | "focused" | "selected";
   onFocus: (id: string) => void;
   onSelected: (id: string) => void;
-  onFocuseOut: () => void;
+  onFocusOut: () => void;
 }
 
 export function SelectionItem(props: SelectionItemProps) {
@@ -20,7 +20,7 @@ export function SelectionItem(props: SelectionItemProps) {
     <Wrapper
       variant={props.variant}
       onMouseOver={() => props.onFocus(props.id)}
-      onMouseLeave={() => props.onFocuseOut()}
+      onMouseLeave={() => props.onFocusOut()}
       onClick={() => props.onSelected(props.id)}
     >
       <InnerWrapper>
