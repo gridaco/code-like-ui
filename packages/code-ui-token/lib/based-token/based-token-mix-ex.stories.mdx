@@ -161,31 +161,13 @@ based-token total usage
             console.log("onDoubleClick");
           }}
           cornerRadius={2}
-          contentPadding={[0, 2]}
+          contentPadding={0}
           contentColor="#4EC9B0"
-          content={
-            <>
-              <Parentheses isOpen={true} />
-              <Parentheses isOpen={false} />
-              <BasedToken
-                onClick={() => {}}
-                onDoubleClick={() => {}}
-                cornerRadius={2}
-                contentPadding={[0, 2]}
-                contentColor="#2F7AD2"
-                content={<>=></>}
-              />
-              <BasedToken
-                onClick={() => {}}
-                onDoubleClick={() => {}}
-                cornerRadius={2}
-                contentPadding={[0, 2]}
-                contentColor="#4EC9B0"
-                content={<>void</>}
-              />
-            </>
-          }
+          backgroundColor="#3a3842"
+          content={<BasedTokenStorybookExample />}
         />
+        <br />
+        <Bracket isOpen={false} />
       </div>
     </>
   </Story>

@@ -5,7 +5,7 @@ import Tippy from "@tippyjs/react";
 // import { Option } from "../field/type";
 
 export const DropDown = (props: IDropDown) => {
-  const [item, setItme] = useState<string>(props.items[0].value);
+  const [item, setItem] = useState<string>(props.items[0].value);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
@@ -13,7 +13,7 @@ export const DropDown = (props: IDropDown) => {
   const hide = () => setIsVisible(false);
 
   const handleItem = useCallback((value: string) => {
-    setItme(value);
+    setItem(value);
     hide();
     props.onSelect(value);
   }, []);
@@ -41,7 +41,7 @@ export const DropDown = (props: IDropDown) => {
         //fix type!
         const item: any = props.items[selectedIndex];
         if (item) {
-          setItme(item);
+          setItem(item);
         }
       }
     },

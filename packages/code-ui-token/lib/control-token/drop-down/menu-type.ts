@@ -1,5 +1,6 @@
+import { ReactNode } from "react";
 export interface Option<T> {
-  name: string;
+  name: string | ReactNode;
   value: T;
   description?: string;
 }
