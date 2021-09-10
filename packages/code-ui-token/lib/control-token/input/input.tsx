@@ -39,7 +39,7 @@ export const Input = (props: InputProps) => {
   );
 };
 
-const StyledInput = styled.input<{ color: string; bgColor: string }>`
+const StyledInput = styled.input<{ color?: string; bgColor?: string }>`
   padding-right: 5px;
   background: rgba(255, 255, 255, 0);
   border: 0;

@@ -13,7 +13,9 @@ export function LeadingIcon(props: LeadingIconProps) {
   if (props.state === "color" && !props.color) {
     throw "has no color in leading icon";
   }
-  return <Wrapper state={props.state} color={props.color}></Wrapper>;
+  return (
+    <Wrapper state={props.state ? props.state : "empty"} color={props.color} />
+  );
 }
 
 const Wrapper = styled.div<{ state: string; color?: string }>`

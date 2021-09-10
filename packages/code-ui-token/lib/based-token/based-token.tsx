@@ -8,7 +8,7 @@ interface BasedTokenProps {
   onDoubleClick: () => void;
   onHover?: (isOver: boolean) => void;
   hoverOverlayColor?: string;
-  cornerRadius?: number; // if input 10  => 10px
+  cornerRadius: number; // if input 10  => 10px
   contentPadding: number | number[];
   contentColor: string;
   backgroundColor?: string;
@@ -18,26 +18,18 @@ interface BasedTokenProps {
 // Can I get number array to cornerRadius and contentPadding?
 
 export function BasedToken(props: BasedTokenProps) {
-  const bgRef = useRef(null);
-  const [bgSize, setBgSize] = useState({
-    width: 0,
-    height: 0,
-  });
+  // const bgRef = useRef(null);
 
-  useEffect(() => {
-    if (!bgRef.current) {
-      return;
-    } else {
-      setBgSize({
-        ...bgSize,
-        width: Math.floor(bgRef.current.getBoundingClientRect().width),
-        height: Math.floor(bgRef.current.getBoundingClientRect().height),
-      });
+  const onMouseOver = () => {
+    if (props.onHover) {
+      props.onHover(true);
     }
-  }, [props.content]); //empty dependency array so it only runs once at render
-
-  const onMouseOver = () => props.onHover(true);
-  const onMouseLeave = () => props.onHover(false);
+  };
+  const onMouseLeave = () => {
+    if (props.onHover) {
+      props.onHover(false);
+    }
+  };
 
   return (
     <Wrapper>
@@ -48,14 +40,13 @@ export function BasedToken(props: BasedTokenProps) {
         onMouseLeave={onMouseLeave}
         hoverOverlayColor={props.hoverOverlayColor}
         cornerRadius={props.cornerRadius}
-        size={bgSize}
       >
         <Background
           bgColor={props.backgroundColor}
           cornerRadius={props.cornerRadius}
         >
           <Content
-            ref={bgRef}
+            // ref={bgRef}
             color={props.contentColor}
             padding={props.contentPadding}
           >
@@ -75,11 +66,9 @@ const Wrapper = styled.div`
 const HoverOverlay = styled.div<{
   hoverOverlayColor?: string;
   cornerRadius: number;
-  size: { width: number; height: number };
+  // size: { width: number; height: number };
 }>`
   border-radius: ${(props) => `${props.cornerRadius + 1}px`};
-  /* width: ${(props) => `${props.size.width}px`}; */
-  /* height: ${(props) => `${props.size.height}px`}; */
 
   /* temp hover state for demo purposes*/
 
@@ -109,7 +98,7 @@ const Content = styled.div<{ color: string; padding: number[] | number }>`
         `}
 `;
 
-const Background = styled.div<{ bgColor: string; cornerRadius: number }>`
+const Background = styled.div<{ bgColor?: string; cornerRadius: number }>`
   width: fit-content;
   background-color: ${(props) => props.bgColor};
   border-radius: ${(props) => `${props.cornerRadius}px`};
