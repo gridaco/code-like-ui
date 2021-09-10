@@ -15,7 +15,7 @@ export function Bracket(props: BracketProps) {
         console.log("onDoubleClick");
       }}
       cornerRadius={2}
-      contentPadding={[0, 2]}
+      contentPadding={[0, 7]}
       contentColor="#D4D4D4"
       content={
         <span style={{ fontSize: "14px" }}>
