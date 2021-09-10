@@ -9,7 +9,7 @@ interface BasedTokenProps {
   onHover?: (isOver: boolean) => void;
   hoverOverlayColor?: string;
   cornerRadius?: number; // if input 10  => 10px
-  contentPadding: number;
+  contentPadding: number | number[];
   contentColor: string;
   backgroundColor?: string;
   content: ReactNode;
@@ -94,9 +94,16 @@ const HoverOverlay = styled.div<{
   }
 `;
 
-const Content = styled.div<{ color: string; padding: number }>`
+const Content = styled.div<{ color: string; padding: number[] | number }>`
   color: ${(props) => props.color};
-  padding: ${(props) => `${props.padding}px`};
+  ${(props) =>
+    typeof props.padding === "object"
+      ? css`
+          padding: ${props.padding[0]}px ${props.padding[1]}px;
+        `
+      : css`
+          padding: ${props.padding}px;
+        `}
 `;
 
 const Background = styled.div<{ bgColor: string; cornerRadius: number }>`
