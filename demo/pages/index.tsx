@@ -61,7 +61,7 @@ export default function Home() {
           onSelected={suggestionsSelect}
         />
 
-        {/* <Interface
+        <Interface
           lang={'js'}
           theme={'monokai'}
           onChange={handleClick}
@@ -80,7 +80,7 @@ export default function Home() {
             hidable: true,
           }}
           onChange={handleClick}
-        /> */}
+        />
       </body>
     </div>
   );

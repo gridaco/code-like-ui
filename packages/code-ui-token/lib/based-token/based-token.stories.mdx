@@ -1,5 +1,6 @@
 import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
 import { BasedToken } from "./based-token";
+import { BasedTokenStorybookExample } from "./based-token-storybook-example";
 
 <Meta title="code-ui-token/based-token" />
 
@@ -17,10 +18,9 @@ based-token is most commonly used token
         console.log("onDoubleClick");
       }}
       cornerRadius={2}
-      contentPadding={10}
+      contentPadding={8}
       contentColor="#D7D7D7"
-      backgroundColor="#3A3842"
-      content={<span>hi</span>}
+      content={<span>span</span>}
     />
   </Story>
   <Story name="onHover">
@@ -38,6 +38,20 @@ based-token is most commonly used token
       contentColor="#D7D7D7"
       backgroundColor="#3A3842"
       content={<span>hi</span>}
+    />
+  </Story>
+  <Story name="mixed example">
+    <BasedToken
+      onClick={() => {
+        console.log("onClicked");
+      }}
+      onDoubleClick={() => {
+        console.log("onDoubleClick");
+      }}
+      cornerRadius={2}
+      contentPadding={8}
+      contentColor="#D7D7D7"
+      content={<BasedTokenStorybookExample />}
     />
   </Story>
 </Preview>

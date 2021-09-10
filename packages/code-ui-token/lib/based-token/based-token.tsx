@@ -8,10 +8,10 @@ interface BasedTokenProps {
   onDoubleClick: () => void;
   onHover?: (isOver: boolean) => void;
   hoverOverlayColor?: string;
-  cornerRadius: number; // if input 10  => 10px
+  cornerRadius?: number; // if input 10  => 10px
   contentPadding: number;
   contentColor: string;
-  backgroundColor: string;
+  backgroundColor?: string;
   content: ReactNode;
 }
 
@@ -72,9 +72,7 @@ const HoverOverlay = styled.div<{
   cornerRadius: number;
   size: { width: number; height: number };
 }>`
-  width: fit-content;
   border-radius: ${(props) => `${props.cornerRadius}px`};
-  cursor: pointer;
   width: ${(props) => `${props.size.width}px`};
   height: ${(props) => `${props.size.height}px`};
   position: absolute;
