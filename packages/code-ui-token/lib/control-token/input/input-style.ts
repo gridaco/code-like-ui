@@ -2,8 +2,8 @@ import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
 export const InputStyle = css`
-  margin-right: 5px;
-  background: #323134;
+  padding-right: 5px;
+  background: rgba(255, 255, 255, 0);
   border: 0;
   outline: none;
   color: #fff;
