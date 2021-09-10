@@ -170,6 +170,49 @@ based-token total usage
             content={<BasedTokenStorybookExample />}
           />
         </div>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <Tab />
+          <BasedToken
+            onClick={() => {
+              console.log("onClicked");
+            }}
+            onDoubleClick={() => {
+              console.log("onDoubleClick");
+            }}
+            cornerRadius={2}
+            contentPadding={0}
+            contentColor="#aaa"
+            content={
+              <span style={{ textDecoration: "underline" }}>add property</span>
+            }
+          />
+          <BasedToken
+            onClick={() => {
+              console.log("onClicked");
+            }}
+            onDoubleClick={() => {
+              console.log("onDoubleClick");
+            }}
+            cornerRadius={2}
+            contentPadding={2}
+            contentColor="#aaa"
+            content={<span>/</span>}
+          />
+          <BasedToken
+            onClick={() => {
+              console.log("onClicked");
+            }}
+            onDoubleClick={() => {
+              console.log("onDoubleClick");
+            }}
+            cornerRadius={2}
+            contentPadding={2}
+            contentColor="#aaa"
+            content={
+              <span style={{ textDecoration: "underline" }}>add slot</span>
+            }
+          />
+        </div>
         <Bracket isOpen={false} />
       </div>
     </>
