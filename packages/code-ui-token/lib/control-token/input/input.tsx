@@ -19,7 +19,7 @@ export const Input = (props: InputPrpps) => {
     }
   }, [inputValue]);
 
-  function inputOnChagne(value: string) {
+  function inputOnChange(value: string) {
     setInputValue(value);
     // Don't change this static!
     props.onChange("static.input.value", value);
@@ -28,7 +28,7 @@ export const Input = (props: InputPrpps) => {
   return (
     <>
       <StyledInput
-        onChange={(e) => inputOnChagne(e.target.value)}
+        onChange={(e) => inputOnChange(e.target.value)}
         value={inputValue}
         size={inputSize}
       />
