@@ -1,2 +1,6 @@
 import CodeComent from "./code-coment";
-export { CodeComent };
+import Tab from "./tab";
+
+export { CodeComent, Tab };
+export * from "./bracket";
+export * from "./parentheses";

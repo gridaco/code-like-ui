@@ -76,7 +76,7 @@ based-token is most commonly used token
       onHover={(isOver) => console.log(isOver)}
       hoverOverlayColor={"rgba(157, 178, 255, 0.25)"}
       cornerRadius={2}
-      contentPadding={[0, 8]}
+      contentPadding={[0, 2]}
       contentColor="#4EC9B0"
       content={<Input value="props" color="#4EC9B0" />}
     />
@@ -90,9 +90,9 @@ based-token is most commonly used token
       onHover={(isOver) => console.log(isOver)}
       hoverOverlayColor={"rgba(157, 178, 255, 0.25)"}
       cornerRadius={2}
-      contentPadding={[0, 8]}
+      contentPadding={[0, 2]}
       contentColor="#4EC9B0"
-      content={<Input value="props" color="#4EC9B0" />}
+      content={<span style={{ fontSize: "14px" }}>props</span>}
     />
     <BasedToken
       onClick={() => {
@@ -102,7 +102,7 @@ based-token is most commonly used token
         console.log("onDoubleClick");
       }}
       cornerRadius={2}
-      contentPadding={[0, 8]}
+      contentPadding={[0, 2]}
       contentColor="#4EC9B0"
       content={<BasedTokenStorybookExample />}
     />

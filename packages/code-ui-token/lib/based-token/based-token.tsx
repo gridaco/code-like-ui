@@ -69,6 +69,7 @@ export function BasedToken(props: BasedTokenProps) {
 
 const Wrapper = styled.div`
   width: fit-content;
+  display: inline-block;
 `;
 
 const HoverOverlay = styled.div<{

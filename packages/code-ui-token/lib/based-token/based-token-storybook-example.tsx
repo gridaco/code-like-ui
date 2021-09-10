@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import React, { Fragment, useCallback, useState } from "react";
-import { BasedToken, CodeComent, DropDown, Input } from "..";
+import { BasedToken, Bracket, CodeComent, DropDown, Input } from "..";
 import Tippy from "@tippyjs/react";
 
 export function BasedTokenStorybookExample() {
@@ -27,6 +27,7 @@ export function BasedTokenStorybookExample() {
 
   return (
     <>
+      <Bracket isOpen={true} />
       <DropDown
         id="dropdown-id"
         items={items}
