@@ -80,7 +80,7 @@ export function Suggestions(props: SuggestionsProps) {
                   }
                   onFocus={onFocusChange}
                   onSelected={props.onSelected}
-                  onFocuseOut={onLeave}
+                  onFocusOut={onLeave}
                 />
               );
             })}
