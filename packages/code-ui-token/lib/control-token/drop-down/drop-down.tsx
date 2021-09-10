@@ -92,8 +92,8 @@ const Wrapper = styled.div`
   overflow-y: auto;
 
   // Temporarily fixed until theme is modified
-  background: #3a3842;
-  color: #d7d7d7;
+  /* background: #3a3842; */
+  /* color: #d7d7d7; */
   border-radius: 2px;
 `;
 

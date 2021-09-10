@@ -1,7 +1,7 @@
 import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
 import { BasedToken } from "./based-token";
 import { BasedTokenStorybookExample } from "./based-token-storybook-example";
-import { Input, Tab, Colon } from "..";
+import { Input, Tab, Colon, Parentheses } from "..";
 import { Bracket } from "../static-token/bracket";
 
 <Meta title="code-ui-token/based-token-mix-ex" />
@@ -13,7 +13,13 @@ based-token total usage
 <Preview>
   <Story name="interface example">
     <>
-      <div style={{ backgroundColor: "#1E1E1E", padding: "20px" }}>
+      <div
+        style={{
+          backgroundColor: "#1E1E1E",
+          padding: "20px",
+          fontSize: "14px",
+        }}
+      >
         <BasedToken
           onClick={() => {
             console.log("onClicked");
@@ -95,12 +101,90 @@ based-token total usage
           onDoubleClick={() => {
             console.log("onDoubleClick");
           }}
+          cornerRadius={2}
+          contentPadding={0}
+          contentColor="#4EC9B0"
+          backgroundColor="#3a3842"
+          content={<BasedTokenStorybookExample />}
+        />
+        <br />
+        <Tab />
+        <BasedToken
+          onClick={() => {
+            console.log("onClicked");
+          }}
+          onDoubleClick={() => {
+            console.log("onDoubleClick");
+          }}
           onHover={(isOver) => console.log(isOver)}
           hoverOverlayColor={"rgba(157, 178, 255, 0.25)"}
           cornerRadius={2}
           contentPadding={[0, 2]}
+          contentColor="#9CDCFE"
+          content={<Input value="buttonText" color="#9CDCFE" />}
+        />
+        <Colon />
+        <BasedToken
+          onClick={() => {
+            console.log("onClicked");
+          }}
+          onDoubleClick={() => {
+            console.log("onDoubleClick");
+          }}
+          cornerRadius={2}
+          contentPadding={[0, 2]}
           contentColor="#4EC9B0"
           content={<span style={{ fontSize: "14px" }}>string</span>}
+        />
+        <br />
+        <Tab />
+        <BasedToken
+          onClick={() => {
+            console.log("onClicked");
+          }}
+          onDoubleClick={() => {
+            console.log("onDoubleClick");
+          }}
+          onHover={(isOver) => console.log(isOver)}
+          hoverOverlayColor={"rgba(157, 178, 255, 0.25)"}
+          cornerRadius={2}
+          contentPadding={[0, 2]}
+          contentColor="#DCDCAA"
+          content={<Input value="onClick" color="#DCDCAA" />}
+        />
+        <Colon />
+        <BasedToken
+          onClick={() => {
+            console.log("onClicked");
+          }}
+          onDoubleClick={() => {
+            console.log("onDoubleClick");
+          }}
+          cornerRadius={2}
+          contentPadding={[0, 2]}
+          contentColor="#4EC9B0"
+          content={
+            <>
+              <Parentheses isOpen={true} />
+              <Parentheses isOpen={false} />
+              <BasedToken
+                onClick={() => {}}
+                onDoubleClick={() => {}}
+                cornerRadius={2}
+                contentPadding={[0, 2]}
+                contentColor="#2F7AD2"
+                content={<>=></>}
+              />
+              <BasedToken
+                onClick={() => {}}
+                onDoubleClick={() => {}}
+                cornerRadius={2}
+                contentPadding={[0, 2]}
+                contentColor="#4EC9B0"
+                content={<>void</>}
+              />
+            </>
+          }
         />
       </div>
     </>
