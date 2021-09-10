@@ -20,7 +20,7 @@ export interface SuggestionsProps {
 }
 
 export function Suggestions(props: SuggestionsProps) {
-  const [showDoc, setShowDoc] = useState<SuggestionItems>(undefined);
+  const [showDoc, setShowDoc] = useState<SuggestionItems>(null);
   const [isHover, setIsHover] = useState<boolean>(false);
   const [sugWidth, setSugWidth] = useState<number>(0);
   const sugRef = useRef(null);

@@ -3,6 +3,7 @@ import { BasedToken } from "./based-token";
 import { BasedTokenStorybookExample } from "./based-token-storybook-example";
 import { Input, Tab, Colon, Parentheses } from "..";
 import { Bracket } from "../static-token/bracket";
+import { StorybookExampleWithHover } from "./storybook-example-with-hover";
 
 <Meta title="code-ui-token/based-token-mix-ex" />
 
@@ -63,20 +64,7 @@ based-token total usage
             content={<span style={{ fontSize: "14px" }}>coverImage</span>}
           />
           <Colon />
-          <BasedToken
-            onClick={() => {
-              console.log("onClicked");
-            }}
-            onDoubleClick={() => {
-              console.log("onDoubleClick");
-            }}
-            onHover={(isOver) => console.log(isOver)}
-            hoverOverlayColor={"rgba(157, 178, 255, 0.25)"}
-            cornerRadius={2}
-            contentPadding={[0, 2]}
-            contentColor="#4EC9B0"
-            content={<span style={{ fontSize: "14px" }}>string</span>}
-          />
+          <StorybookExampleWithHover />
         </div>
         <div style={{ display: "flex", alignItems: "center" }}>
           <Tab />
