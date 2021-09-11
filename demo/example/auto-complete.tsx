@@ -34,7 +34,10 @@ export function AutoComplete() {
     if (value === '') {
       setShowList([]);
     } else {
-      let regex = new RegExp(`${value}+`);
+      var regex = new RegExp(
+        '^' + inputValue.replace(/[-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&'),
+        'i',
+      );
 
       const resTest = dropdownList.filter((item) => {
         if (regex.test(item.label)) {
