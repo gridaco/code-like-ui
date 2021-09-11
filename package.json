@@ -5,7 +5,8 @@
   "private": true,
   "workspaces": [
     "demo",
-    "packages/*"
+    "packages/*",
+    "lib/coli/packages/*"
   ],
   "devDependencies": {
     "@babel/core": "^7.15.5",
