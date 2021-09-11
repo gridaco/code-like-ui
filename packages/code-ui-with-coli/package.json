@@ -4,5 +4,8 @@
     "description": "build @code-ui based for coli projects",
     "author": "Grida.co",
     "license": "Apache 2.0",
-    "private": false
+    "private": false,
+    "dependencies": {
+        "@coli.codes/core-syntax-kind": "^0.0.0"
+    }
 }

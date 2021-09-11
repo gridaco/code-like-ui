@@ -1124,6 +1124,11 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@coli.codes/core-syntax-kind@^0.0.0":
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/@coli.codes/core-syntax-kind/-/core-syntax-kind-0.0.0.tgz#e520f39adcfb31de0e2b67908803961d4a702224"
+  integrity sha512-Jy5znFuX33o0PKG+WIXzhVJfhycRp7sz/wzXOiHp6w9sBmrqrgpBQ335MeI6J96aZY/XImAxWESdGnN12+/HlA==
+
 "@discoveryjs/json-ext@^0.5.3":
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.3.tgz#90420f9f9c6d3987f176a19a7d8e764271a2f55d"
