@@ -32,7 +32,7 @@ export function AutoComplete() {
 
   function findList(value: string) {
     if (value === '') {
-      setShowList(dropdownList);
+      setShowList([]);
     } else {
       let regex = new RegExp(`${value}+`);
 
@@ -45,6 +45,12 @@ export function AutoComplete() {
     }
   }
 
+  function autoCompleteSetToInput(key: string) {
+    if (key === 'Enter') {
+      setInputValue(showList[0].label);
+    }
+  }
+
   return (
     <>
       <Wrapper w={inputWidth}>
@@ -53,6 +59,10 @@ export function AutoComplete() {
             setInputValue(e.target.value);
           }}
           ref={inputRef}
+          onKeyPress={(e) => {
+            autoCompleteSetToInput(e.key);
+          }}
+          value={inputValue}
         />
         <InputPlaceholder w={inputWidth}>{showList[0]?.label}</InputPlaceholder>
         {showList.map((item) => {
@@ -83,6 +93,6 @@ const Input = styled.input`
 const InputPlaceholder = styled.div<{ w?: number; h?: number }>`
   position: absolute;
   width: ${(props) => `${props.w}px`};
-  color: red;
+  color: #b7b7b7;
   top: 0;
 `;
