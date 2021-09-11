@@ -49,7 +49,7 @@ export function AutoComplete() {
   }
 
   function autoCompleteSetToInput(key: string) {
-    if (key === 'Enter') {
+    if (key === 'ArrowRight' || key === 'Enter' || key === 'Tab') {
       setInputValue(showList[0].label);
     }
   }
@@ -62,7 +62,7 @@ export function AutoComplete() {
             setInputValue(e.target.value);
           }}
           ref={inputRef}
-          onKeyPress={(e) => {
+          onKeyDown={(e) => {
             autoCompleteSetToInput(e.key);
           }}
           value={inputValue}
