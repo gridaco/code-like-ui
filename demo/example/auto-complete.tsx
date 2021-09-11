@@ -15,7 +15,6 @@ export const dropdownList: ListProps[] = [
 ];
 export function AutoComplete() {
   const [inputValue, setInputValue] = useState<string>('');
-  // init is origin list
   const [showList, setShowList] = useState<ListProps[]>(dropdownList);
   const [inputWidth, setInputWidth] = useState<number>(0);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -91,11 +90,20 @@ const Input = styled.input`
   background-color: transparent;
   position: relative;
   z-index: 10;
+  outline: none;
+  border: 1px solid;
+  border-radius: 2px;
+
+  // Change InputPlaceholder when changing
+  font: 400 14px system-ui;
 `;
 
 const InputPlaceholder = styled.div<{ w?: number; h?: number }>`
   position: absolute;
   width: ${(props) => `${props.w}px`};
   color: #b7b7b7;
-  top: 0;
+  top: 2px;
+  left: 3px;
+  // Change Input when changing
+  font: 400 14px system-ui;
 `;
