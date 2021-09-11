@@ -13,10 +13,13 @@ export const dropdownList: ListProps[] = [
   { label: 'catDog', value: 'catDog' },
   { label: 'WOW', value: 'WOW' },
 ];
+
 export function AutoComplete() {
   const [inputValue, setInputValue] = useState<string>('');
   const [showList, setShowList] = useState<ListProps[]>(dropdownList);
   const [inputWidth, setInputWidth] = useState<number>(0);
+
+  // checking for auto-complete box size
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -32,7 +35,13 @@ export function AutoComplete() {
   function findList(value: string) {
     if (value === '') {
       setShowList([]);
-    } else {
+    }
+    // else if (showList.length > 0) {
+    //   if (showList[0].label === value) {
+    //     setShowList([]);
+    //   }
+    // }
+    else {
       var regex = new RegExp(
         '^' + inputValue.replace(/[-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&'),
         'i',
@@ -49,7 +58,9 @@ export function AutoComplete() {
 
   function autoCompleteSetToInput(key: string) {
     if (key === 'ArrowRight' || key === 'Enter' || key === 'Tab') {
-      setInputValue(showList[0].label);
+      if (showList[0]) {
+        setInputValue(showList[0].label);
+      }
     }
   }
 
@@ -67,6 +78,7 @@ export function AutoComplete() {
           value={inputValue}
         />
         <InputPlaceholder w={inputWidth}>{showList[0]?.label}</InputPlaceholder>
+
         {showList.map((item) => {
           return (
             <>
@@ -102,6 +114,8 @@ const InputPlaceholder = styled.div<{ w?: number; h?: number }>`
   position: absolute;
   width: ${(props) => `${props.w}px`};
   color: #b7b7b7;
+
+  // top and left is input's border + padding size
   top: 2px;
   left: 3px;
   // Change Input when changing
