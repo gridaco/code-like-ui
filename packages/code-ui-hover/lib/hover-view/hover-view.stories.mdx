@@ -1,0 +1,25 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { HoverView } from "./hover-view";
+import { StoryViewImageExample } from "./story-view-image-example";
+
+<Meta title="code-ui-hover/hover-view" />
+
+Views that appear as tooltips when hovered
+
+# Preview
+
+<Preview>
+  <Story name="default">
+    default
+    <HoverView contents={["text", "text"]} />
+  </Story>
+  <Story name="content is mixed">
+    <HoverView
+      contents={["Image", <StoryViewImageExample />, "coverImage - cover.src"]}
+    />
+  </Story>
+</Preview>
+
+# Props
+
+<Props of={HoverView} />

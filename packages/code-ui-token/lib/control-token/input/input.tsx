@@ -1,13 +1,14 @@
 import styled from "@emotion/styled";
 import React, { useEffect, useState } from "react";
-import { InputStyle } from "./input-style";
 
-export interface InputPrpps {
+export interface InputProps {
   value: string;
   onChange: (field: string, value: string) => void;
+  color?: string;
+  bgColor?: string;
 }
 
-export const Input = (props: InputPrpps) => {
+export const Input = (props: InputProps) => {
   const [inputSize, setInputSize] = useState<number>(0);
   const [inputValue, setInputValue] = useState<string>(props.value);
 
@@ -19,7 +20,7 @@ export const Input = (props: InputPrpps) => {
     }
   }, [inputValue]);
 
-  function inputOnChagne(value: string) {
+  function inputOnChange(value: string) {
     setInputValue(value);
     // Don't change this static!
     props.onChange("static.input.value", value);
@@ -28,14 +29,23 @@ export const Input = (props: InputPrpps) => {
   return (
     <>
       <StyledInput
-        onChange={(e) => inputOnChagne(e.target.value)}
+        onChange={(e) => inputOnChange(e.target.value)}
         value={inputValue}
         size={inputSize}
+        color={props.color}
+        bgColor={props.bgColor}
       />
     </>
   );
 };
 
-const StyledInput = styled.input`
-  ${InputStyle}
+const StyledInput = styled.input<{ color?: string; bgColor?: string }>`
+  padding-right: 5px;
+  background: rgba(255, 255, 255, 0);
+  border: 0;
+  outline: none;
+
+  color: ${(props) => props.color};
+  background-color: ${(props) =>
+    props.bgColor ? props.bgColor : "rgba(255,255,255,0)"};
 `;

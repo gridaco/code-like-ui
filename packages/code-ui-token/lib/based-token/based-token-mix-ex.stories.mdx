@@ -1,0 +1,212 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { BasedToken } from "./based-token";
+import { BasedTokenStorybookExample } from "./based-token-storybook-example";
+import { Input, Tab, Colon, Parentheses } from "..";
+import { Bracket } from "../static-token/bracket";
+import { StorybookExampleWithHover } from "./storybook-example-with-hover";
+
+<Meta title="code-ui-token/based-token-mix-ex" />
+
+based-token total usage
+
+# Preview
+
+<Preview>
+  <Story name="interface example">
+    <>
+      <div
+        style={{
+          backgroundColor: "#1E1E1E",
+          padding: "20px",
+          fontSize: "14px",
+        }}
+      >
+        <BasedToken
+          onClick={() => {
+            console.log("onClicked");
+          }}
+          onDoubleClick={() => {
+            console.log("onDoubleClick");
+          }}
+          cornerRadius={2}
+          contentPadding={[0, 4]}
+          contentColor="#569CD6"
+          content={<>interface</>}
+        />
+        <BasedToken
+          onClick={() => {
+            console.log("onClicked");
+          }}
+          onDoubleClick={() => {
+            console.log("onDoubleClick");
+          }}
+          onHover={(isOver) => console.log(isOver)}
+          hoverOverlayColor={"rgba(157, 178, 255, 0.25)"}
+          cornerRadius={2}
+          contentPadding={[0, 2]}
+          backgroundColor="#3A3842"
+          contentColor="#4EC9B0"
+          content={<span style={{ fontSize: "14px" }}>props</span>}
+        />
+        <Bracket isOpen={true} />
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <Tab />
+          <BasedToken
+            onClick={() => {
+              console.log("onClicked");
+            }}
+            onDoubleClick={() => {
+              console.log("onDoubleClick");
+            }}
+            cornerRadius={2}
+            contentPadding={[0, 2]}
+            contentColor="#9CDCFE"
+            content={<span style={{ fontSize: "14px" }}>coverImage</span>}
+          />
+          <Colon />
+          <StorybookExampleWithHover />
+        </div>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <Tab />
+          <BasedToken
+            onClick={() => {
+              console.log("onClicked");
+            }}
+            onDoubleClick={() => {
+              console.log("onDoubleClick");
+            }}
+            onHover={(isOver) => console.log(isOver)}
+            hoverOverlayColor={"rgba(157, 178, 255, 0.25)"}
+            cornerRadius={2}
+            contentPadding={[0, 2]}
+            contentColor="#9CDCFE"
+            content={<Input value="content" color="#9CDCFE" />}
+          />
+          <Colon />
+          <BasedToken
+            onClick={() => {
+              console.log("onClicked");
+            }}
+            onDoubleClick={() => {
+              console.log("onDoubleClick");
+            }}
+            cornerRadius={2}
+            contentPadding={0}
+            contentColor="#4EC9B0"
+            backgroundColor="#3a3842"
+            content={<BasedTokenStorybookExample />}
+          />
+        </div>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <Tab />
+          <BasedToken
+            onClick={() => {
+              console.log("onClicked");
+            }}
+            onDoubleClick={() => {
+              console.log("onDoubleClick");
+            }}
+            onHover={(isOver) => console.log(isOver)}
+            hoverOverlayColor={"rgba(157, 178, 255, 0.25)"}
+            cornerRadius={2}
+            contentPadding={[0, 2]}
+            contentColor="#9CDCFE"
+            content={<Input value="buttonText" color="#9CDCFE" />}
+          />
+          <Colon />
+          <BasedToken
+            onClick={() => {
+              console.log("onClicked");
+            }}
+            onDoubleClick={() => {
+              console.log("onDoubleClick");
+            }}
+            cornerRadius={2}
+            contentPadding={[0, 2]}
+            contentColor="#4EC9B0"
+            content={<span style={{ fontSize: "14px" }}>string</span>}
+          />
+        </div>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <Tab />
+          <BasedToken
+            onClick={() => {
+              console.log("onClicked");
+            }}
+            onDoubleClick={() => {
+              console.log("onDoubleClick");
+            }}
+            onHover={(isOver) => console.log(isOver)}
+            hoverOverlayColor={"rgba(157, 178, 255, 0.25)"}
+            cornerRadius={2}
+            contentPadding={[0, 2]}
+            contentColor="#DCDCAA"
+            content={<Input value="onClick" color="#DCDCAA" />}
+          />
+          <Colon />
+          <BasedToken
+            onClick={() => {
+              console.log("onClicked");
+            }}
+            onDoubleClick={() => {
+              console.log("onDoubleClick");
+            }}
+            cornerRadius={2}
+            contentPadding={0}
+            contentColor="#4EC9B0"
+            backgroundColor="#3a3842"
+            content={<BasedTokenStorybookExample />}
+          />
+        </div>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <Tab />
+          <BasedToken
+            onClick={() => {
+              console.log("onClicked");
+            }}
+            onDoubleClick={() => {
+              console.log("onDoubleClick");
+            }}
+            cornerRadius={2}
+            contentPadding={0}
+            contentColor="#aaa"
+            content={
+              <span style={{ textDecoration: "underline" }}>add property</span>
+            }
+          />
+          <BasedToken
+            onClick={() => {
+              console.log("onClicked");
+            }}
+            onDoubleClick={() => {
+              console.log("onDoubleClick");
+            }}
+            cornerRadius={2}
+            contentPadding={2}
+            contentColor="#aaa"
+            content={<span>/</span>}
+          />
+          <BasedToken
+            onClick={() => {
+              console.log("onClicked");
+            }}
+            onDoubleClick={() => {
+              console.log("onDoubleClick");
+            }}
+            cornerRadius={2}
+            contentPadding={2}
+            contentColor="#aaa"
+            content={
+              <span style={{ textDecoration: "underline" }}>add slot</span>
+            }
+          />
+        </div>
+        <Bracket isOpen={false} />
+      </div>
+    </>
+  </Story>
+</Preview>
+
+# Props
+
+<Props of={BasedToken} />

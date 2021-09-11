@@ -1,12 +1,12 @@
 import React from "react";
 import { InterfaceFieldProps } from "../type";
-import { ContorlTokenHandle, StaticTokenHandle } from "@code-ui/token";
+import { ControlTokenHandle } from "@code-ui/token";
 
 const defaultTemplate = "{{tag}}{{name}}{{ static }}{{ contorl.input }}";
 
 interface IField<T = string> {
   field: InterfaceFieldProps;
-  onChange: (field: string, value: T) => void;
+  onChange: () => void;
 }
 
 // For checking {{ static }}
@@ -43,20 +43,15 @@ export function Field(props: IField) {
   // 1. check contorl token -> if contorl token: handle and return <Drop or <Input ~ like this
   // 2. check static token -> if contorl token: handle and return <span style={{}} ~
   // 3. if nothing -> <span>field</span>
-  _fieldArray.map((field, index) => {
-    if (field === CONTORL) {
-      ContorlTokenHandle();
-    } else if (field === STATIC) {
-      StaticTokenHandle();
+  return _fieldArray.map((d, index) => {
+    if (d === CONTORL) {
+      ControlTokenHandle();
+      return <span>contorl</span>;
+    } else if (d === STATIC && !!field.token?.static) {
+      return `static token ${field.token.static.keyword}`;
+      // return StaticTokenHandle(field.token.static.keyword);
     } else {
       return <span>{field}</span>;
     }
   });
-
-  // console.log(_1);
-  return (
-    <div>
-      <div />
-    </div>
-  );
 }

@@ -17,7 +17,8 @@
   },
   "dependencies": {
     "@tippyjs/react": "^4.2.5",
-    "@code-ui/color-scheme": "0.0.1-beta"
+    "@code-ui/color-scheme": "0.0.2-beta",
+    "@code-ui/hover": "0.0.1-beta"
   },
   "devDependencies": {
     "@emotion/react": "^11.4.1",

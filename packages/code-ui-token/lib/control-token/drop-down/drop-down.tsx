@@ -5,7 +5,7 @@ import Tippy from "@tippyjs/react";
 // import { Option } from "../field/type";
 
 export const DropDown = (props: IDropDown) => {
-  const [item, setItme] = useState<string>(props.items[0].value);
+  const [item, setItem] = useState<string>(props.items[0].value);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
@@ -13,7 +13,7 @@ export const DropDown = (props: IDropDown) => {
   const hide = () => setIsVisible(false);
 
   const handleItem = useCallback((value: string) => {
-    setItme(value);
+    setItem(value);
     hide();
     props.onSelect(value);
   }, []);
@@ -41,7 +41,7 @@ export const DropDown = (props: IDropDown) => {
         //fix type!
         const item: any = props.items[selectedIndex];
         if (item) {
-          setItme(item);
+          setItem(item);
         }
       }
     },
@@ -53,7 +53,7 @@ export const DropDown = (props: IDropDown) => {
       <StyledTippy
         visible={isVisible}
         onClickOutside={hide}
-        placement={"bottom"}
+        placement={"bottom-start"}
         content={
           <Options onKeyUp={(event) => controlKeyComand(event)}>
             {props.items.map((item, index) => {
@@ -92,13 +92,15 @@ const Wrapper = styled.div`
   overflow-y: auto;
 
   // Temporarily fixed until theme is modified
-  background: #3a3842;
-  color: #d7d7d7;
+  /* background: #3a3842; */
+  /* color: #d7d7d7; */
   border-radius: 2px;
 `;
 
 const StyledTippy = styled(Tippy)`
   pointer-events: auto !important;
+  transform: translate3d(0, -9px, 0);
+  border-radius: 2px;
 `;
 
 const Select = styled.ul`
@@ -111,6 +113,8 @@ const Select = styled.ul`
 
 const Options = styled.div<OptionsProps>`
   background: #3f3c47;
+  border-radius: 2px;
+  padding: 4px 0;
 `;
 
 const FieldWrapper = styled.li`

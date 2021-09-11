@@ -1,9 +1,12 @@
+import React, { ReactNode } from 'react';
+
 import { IField } from '@code-ui/docstring';
 import {
   InterfaceAttr,
   InterfaceFieldProps,
   InterfaceTypeOption,
 } from '@code-ui/interface';
+import { SuggestionItems } from '@code-ui/completion-provider';
 
 export const docstring_lang_field: IField = {
   tag: '@',
@@ -65,7 +68,7 @@ export const interface_test_options = [
   },
 ];
 
-export const interface_property_Field: InterfaceFieldProps = {
+export const interface_property_field: InterfaceFieldProps = {
   tag: '',
   name: 'buttonText',
   template: `{{ name }} : {{ contorl.dropdown }};`,
@@ -90,12 +93,29 @@ export const interface_attr_test_options: InterfaceTypeOption[] = [
   },
 ];
 
-export const interfaceAttr1: InterfaceAttr = {
+export const interface_attr1: InterfaceAttr = {
   label: 'coverImage',
   contorls: interface_attr_test_options,
 };
 
-export const interfaceAttr2: InterfaceAttr = {
+export const interface_attr2: InterfaceAttr = {
   label: 'content',
   contorls: interface_attr_test_options,
+};
+
+export const subbestions_item_documentation1 = [<>hi</>, <>hi2</>];
+export const subbestions_item_documentation2 = [<>hi3</>, <>hi4</>];
+
+export const subbestions_item1: SuggestionItems = {
+  id: 'first_id',
+  label: 'testing label',
+  detail: 'testing detail',
+  documentation: subbestions_item_documentation1,
+};
+
+export const subbestions_item2: SuggestionItems = {
+  id: 'second_id',
+  label: 'testing label',
+  detail: 'testing detail',
+  documentation: subbestions_item_documentation2,
 };
