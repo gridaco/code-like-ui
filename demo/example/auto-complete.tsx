@@ -6,6 +6,12 @@ interface ListProps {
   value: string;
 }
 
+export interface AutoCompleteProps {
+  originList: ListProps[];
+  value: string;
+  onChange: () => void;
+}
+
 export const dropdownList: ListProps[] = [
   { label: 'label1', value: 'value1' },
   { label: 'label2', value: 'value2' },
@@ -14,14 +20,13 @@ export const dropdownList: ListProps[] = [
   { label: 'WOW', value: 'WOW' },
 ];
 
-export function AutoComplete() {
+export function AutoComplete(props: AutoCompleteProps) {
   const [inputValue, setInputValue] = useState<string>('');
   const [showList, setShowList] = useState<ListProps[]>(dropdownList);
   const [inputWidth, setInputWidth] = useState<number>(0);
 
   // checking for auto-complete box size
   const inputRef = useRef<HTMLInputElement>(null);
-
   useEffect(() => {
     if (!inputRef.current) {
       return;
@@ -67,6 +72,17 @@ export function AutoComplete() {
   return (
     <>
       <Wrapper w={inputWidth}>
+        <p>demo version list </p>
+        {dropdownList.map((item) => {
+          return (
+            <>
+              <div>{item.label}</div>
+            </>
+          );
+        })}
+
+        <br />
+        <br />
         <Input
           onChange={(e) => {
             setInputValue(e.target.value);
