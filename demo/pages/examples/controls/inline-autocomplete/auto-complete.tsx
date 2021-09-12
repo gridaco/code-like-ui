@@ -71,18 +71,18 @@ export function AutoComplete(props: AutoCompleteProps) {
 
   return (
     <>
-      <Wrapper w={inputWidth}>
-        <p>demo version list </p>
-        {dropdownList.map((item) => {
-          return (
-            <>
-              <div>{item.label}</div>
-            </>
-          );
-        })}
+      <p>demo version list </p>
+      {dropdownList.map((item) => {
+        return (
+          <>
+            <div>{item.label}</div>
+          </>
+        );
+      })}
 
-        <br />
-        <br />
+      <br />
+      <br />
+      <Wrapper w={inputWidth}>
         <Input
           onChange={(e) => {
             setInputValue(e.target.value);
