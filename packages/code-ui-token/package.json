@@ -1,6 +1,6 @@
 {
   "name": "@code-ui/token",
-  "version": "0.0.2-beta",
+  "version": "0.0.3",
   "repository": "https://github.com/gridaco/code-like-ui/tree/main/packages/interface",
   "homepage": "https://github.com/gridaco/code-like-ui",
   "author": "Grida.co",
@@ -16,9 +16,9 @@
     "react-dom": "17.0.2"
   },
   "dependencies": {
-    "@tippyjs/react": "^4.2.5",
-    "@code-ui/color-scheme": "0.0.2-beta",
-    "@code-ui/hover": "0.0.2-beta"
+    "@code-ui/color-scheme": "0.0.2",
+    "@code-ui/hover": "0.0.2",
+    "@tippyjs/react": "^4.2.5"
   },
   "devDependencies": {
     "@emotion/react": "^11.4.1",
