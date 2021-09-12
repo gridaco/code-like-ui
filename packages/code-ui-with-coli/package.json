@@ -6,6 +6,7 @@
     "license": "Apache 2.0",
     "private": false,
     "dependencies": {
-        "@coli.codes/core-syntax-kind": "^0.0.0"
+        "@coli.codes/core-syntax-kind": "^0.0.0",
+        "highlight.js": "^11.2.0"
     }
 }

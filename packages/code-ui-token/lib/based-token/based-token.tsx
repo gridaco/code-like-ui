@@ -3,7 +3,7 @@ import Styled from "@emotion/styled";
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
-interface BasedTokenProps {
+export interface BasedTokenProps {
   onClick: () => void;
   onDoubleClick: () => void;
   onHover?: (isOver: boolean) => void;
