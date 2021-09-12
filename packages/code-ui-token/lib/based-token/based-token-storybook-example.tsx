@@ -56,7 +56,6 @@ export function BasedTokenStorybookExample() {
     { name: "string", value: "string", description: "string" },
   ];
   const [item, setItem] = useState<string>(items[0].value);
-  const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   const show = () => setIsVisible(true);

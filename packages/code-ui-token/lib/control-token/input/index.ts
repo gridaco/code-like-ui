@@ -1,2 +1,2 @@
-import { Input } from "./input";
-export default Input;
+export * from "./docstring-input";
+export * from "./input";

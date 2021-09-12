@@ -1,13 +1,14 @@
 import styled from "@emotion/styled";
-import React, { InputHTMLAttributes, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
-export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface DocstringInputProps {
   value: string;
+  onChange: (field: string, value: string) => void;
   color?: string;
   bgColor?: string;
 }
 
-export const Input = (props: InputProps) => {
+export const DocstringInput = (props: DocstringInputProps) => {
   const [inputSize, setInputSize] = useState<number>(0);
   const [inputValue, setInputValue] = useState<string>(props.value);
 
@@ -19,14 +20,20 @@ export const Input = (props: InputProps) => {
     }
   }, [inputValue]);
 
+  function inputOnChange(value: string) {
+    setInputValue(value);
+    // Don't change this static!
+    props.onChange("static.input.value", value);
+  }
+
   return (
     <>
       <StyledInput
+        onChange={(e) => inputOnChange(e.target.value)}
         value={inputValue}
         size={inputSize}
         color={props.color}
         bgColor={props.bgColor}
-        {...props}
       />
     </>
   );
