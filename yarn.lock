@@ -1143,6 +1143,29 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@code-ui/color-scheme@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@code-ui/color-scheme/-/color-scheme-0.0.2.tgz#aa3e805068591cad4f2f7f476d89fba037cb4d85"
+  integrity sha512-Z7YHcEj/2+6oBEQITlxC3qJyRbhilsr0xyeKUJ4SBdY+MTVWmMKN5P/zvVO7DUQ/Lqi9E6bKSk9VOvvfFwvKdQ==
+
+"@code-ui/completion-provider@0.0.1-beta":
+  version "0.0.2"
+  dependencies:
+    "@code-ui/hover" "0.0.2"
+    "@tippyjs/react" "^4.2.5"
+
+"@code-ui/hover@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@code-ui/hover/-/hover-0.0.2.tgz#0e66637417b02b79e3caa2debfeda8f486705375"
+  integrity sha512-czTCGSPloamoxG5uz+MDNsigbtjdbAuK0rjIZKxb0XXl3CmUu/lbFvlRDl87pAqI5us6OLqDdYVUzfzC4oqBcw==
+
+"@code-ui/token@0.0.2-beta":
+  version "0.0.2"
+  dependencies:
+    "@code-ui/color-scheme" "0.0.2"
+    "@code-ui/hover" "0.0.2"
+    "@tippyjs/react" "^4.2.5"
+
 "@discoveryjs/json-ext@^0.5.3":
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.3.tgz#90420f9f9c6d3987f176a19a7d8e764271a2f55d"
