@@ -60,10 +60,12 @@ export function Suggestions(props: SuggestionsProps) {
     <>
       <StyledTippy
         visible={isHover}
+        onClickOutside={() => setIsHover(false)}
         placement="bottom-start"
         content={TippyContent()}
         width={sugWidth}
         max-width={"100%"}
+        delay={[0, 0]}
       >
         <Wrapper ref={sugRef}>
           <>
