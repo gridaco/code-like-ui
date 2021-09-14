@@ -46,7 +46,7 @@ based-token total usage
           contentPadding={[0, 2]}
           backgroundColor="#3A3842"
           contentColor="#4EC9B0"
-          content={<span style={{ fontSize: "14px" }}>props</span>}
+          content={<Input defaultValue="default" color="#4EC9B0" />}
         />
         <Bracket isOpen={true} />
         <div style={{ display: "flex", alignItems: "center" }}>
@@ -141,7 +141,9 @@ based-token total usage
             cornerRadius={2}
             contentPadding={[0, 2]}
             contentColor="#DCDCAA"
-            content={<Input value="onClick" color="#DCDCAA" />}
+            content={
+              <Input value="onClick" defaultValue="default" color="#DCDCAA" />
+            }
           />
           <Colon />
           <BasedToken
