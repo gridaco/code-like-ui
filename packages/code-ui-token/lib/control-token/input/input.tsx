@@ -1,26 +1,27 @@
 import styled from "@emotion/styled";
 import React, { InputHTMLAttributes, useEffect, useState } from "react";
 
+// ATTENTION
+// Either value or defaultValue must be required
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   value?: string;
+  defaultValue?: string;
   color?: string;
   bgColor?: string;
 }
 
 export const Input = (props: InputProps) => {
   const [inputSize, setInputSize] = useState<number>(0);
-  const [inputValue, setInputValue] = useState<string>(
-    props.value ?? props.defaultValue.toString()
-  );
+  const [inputValue, setInputValue] = useState<string>(props.value);
 
   useEffect(() => {
     if (!inputValue) {
-      // if user mistake
-      setInputSize(5);
-    }
-    if (inputValue.length === 0) {
-      setInputSize(1);
-    } else {
+      if (props.defaultValue) {
+        setInputSize(props.defaultValue.length);
+      } else {
+        setInputSize(5);
+      }
+    } else if (inputValue && inputValue.length > 0) {
       setInputSize(inputValue.length);
     }
   }, [inputValue]);
@@ -28,7 +29,9 @@ export const Input = (props: InputProps) => {
   return (
     <>
       <StyledInput
+        type="text"
         value={inputValue}
+        defaultValue={props.defaultValue}
         size={inputSize}
         color={props.color}
         bgColor={props.bgColor}
