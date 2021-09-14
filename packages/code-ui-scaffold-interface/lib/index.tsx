@@ -23,7 +23,7 @@ export function Interface(props: InterfaceProps) {
         <>
           <Span className="keyword">interface</Span>
 
-          <Input value={props.interfaceName} onChange={props.onChange} />
+          <Input value={props.interfaceName} onChange={() => props.onChange} />
           <Span>{`{`}</Span>
           {attrs.map((attr: InterfaceAttr, index: number) => {
             return (
