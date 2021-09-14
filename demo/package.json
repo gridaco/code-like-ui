@@ -14,7 +14,7 @@
     "@code-ui/completion-provider": "0.0.1-beta",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
-    "@code-ui/token": "0.0.4",
+    "@code-ui/token": "0.0.6",
     "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2"

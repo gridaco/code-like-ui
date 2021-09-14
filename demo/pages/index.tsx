@@ -11,8 +11,8 @@ import {
   subbestions_item1,
   subbestions_item2,
 } from '../example/example_fields';
-import { BasedToken } from '@code-ui/token';
 import { Suggestions } from '@code-ui/completion-provider';
+import { BasedToken } from '@code-ui/token';
 
 export default function Home() {
   const [sugSelectedId, setSugSelectedId] = useState(subbestions_item1.id);
