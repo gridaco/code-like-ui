@@ -190,10 +190,10 @@ AppbarFile.declare(Appbar.make());
 AppbarFile.declare(Wrapper, TitleAndAvatarWrapper, Title, Message, Avatar);
 
 function ExampleColiVarView() {
-  // return <ColiCodeView coli={example_interface} />;
-  console.log(AppbarFile);
-  //@ts-ignore
-  return <ColiCodeView coli={AppbarFile.blocks} />;
+  return <ColiCodeView useHightlight={false} coli={example_interface} />;
+  // console.log(AppbarFile);
+  // //@ts-ignore
+  // return <ColiCodeView useHightlight={false} coli={AppbarFile.blocks} />;
 }
 
 const example_coli_var = new VariableDeclaration('data', {
