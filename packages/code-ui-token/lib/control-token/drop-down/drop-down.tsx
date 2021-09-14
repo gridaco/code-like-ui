@@ -24,12 +24,12 @@ export const DropDown = (props: IDropDown) => {
    * Key event handler
    * Not working now.
    */
-  const controlKeyComand = useCallback(
+  const controlKeyCommand = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>) => {
       if (event.key === "ArrowUp") {
-        const previndex =
+        const prevIndex =
           (selectedIndex + props.items.length - 1) % props.items.length;
-        setSelectedIndex(previndex);
+        setSelectedIndex(prevIndex);
       }
 
       if (event.key === "ArrowDown") {
@@ -54,8 +54,9 @@ export const DropDown = (props: IDropDown) => {
         visible={isVisible}
         onClickOutside={hide}
         placement={"bottom-start"}
+        delay={[0, 0]}
         content={
-          <Options onKeyUp={(event) => controlKeyComand(event)}>
+          <Options onKeyUp={(event) => controlKeyCommand(event)}>
             {props.items.map((item, index) => {
               return (
                 <Fragment key={`select-box-${props.id}-${item.value}`}>
