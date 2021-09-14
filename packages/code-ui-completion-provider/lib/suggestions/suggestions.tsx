@@ -50,9 +50,10 @@ export function Suggestions(props: SuggestionsProps) {
   };
 
   function TippyContent() {
-    if (showDoc) {
+    if (!!showDoc?.documentation) {
       return <HoverView contents={showDoc.documentation} />;
     }
+    return false;
   }
 
   return (

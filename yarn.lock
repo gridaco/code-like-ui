@@ -1159,11 +1159,11 @@
   resolved "https://registry.yarnpkg.com/@code-ui/hover/-/hover-0.0.2.tgz#0e66637417b02b79e3caa2debfeda8f486705375"
   integrity sha512-czTCGSPloamoxG5uz+MDNsigbtjdbAuK0rjIZKxb0XXl3CmUu/lbFvlRDl87pAqI5us6OLqDdYVUzfzC4oqBcw==
 
-"@code-ui/token@0.0.2-beta":
+"@code-ui/token@^0.0.2-beta":
   version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@code-ui/token/-/token-0.0.2.tgz#c44f8cce112a938b7dbd0608a0f3cd2e082e65f8"
+  integrity sha512-JKNvZ1TcRjW/uHwQ8bghIpEU4w97F+dwWt4TKu8tx9I42Rmy3xeqN9Fq4s9+M2pt3xYjRER7CwYq9s+R2ye6Qg==
   dependencies:
-    "@code-ui/color-scheme" "0.0.2"
-    "@code-ui/hover" "0.0.2"
     "@tippyjs/react" "^4.2.5"
 
 "@discoveryjs/json-ext@^0.5.3":

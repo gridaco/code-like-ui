@@ -13,7 +13,6 @@ import {
 } from '../example/example_fields';
 import { BasedToken } from '@code-ui/token';
 import { Suggestions } from '@code-ui/completion-provider';
-import { AutoComplete } from '../example/auto-complete';
 
 export default function Home() {
   const [sugSelectedId, setSugSelectedId] = useState(subbestions_item1.id);
@@ -40,7 +39,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
-        <AutoComplete />
         <BasedToken
           onClick={() => {
             console.log('onClicked');
