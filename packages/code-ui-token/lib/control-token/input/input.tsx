@@ -2,14 +2,17 @@ import styled from "@emotion/styled";
 import React, { InputHTMLAttributes, useEffect, useState } from "react";
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  value: string;
+  value?: string;
   color?: string;
   bgColor?: string;
 }
 
 export const Input = (props: InputProps) => {
+  const defaultValue = props.value
+    ? props.value
+    : props.defaultValue.toString();
   const [inputSize, setInputSize] = useState<number>(0);
-  const [inputValue, setInputValue] = useState<string>(props.value);
+  const [inputValue, setInputValue] = useState<string>(defaultValue);
 
   useEffect(() => {
     if (inputValue.length === 0) {
