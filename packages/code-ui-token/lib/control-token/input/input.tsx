@@ -29,7 +29,6 @@ export const Input = (props: InputProps) => {
   return (
     <>
       <StyledInput
-        type="text"
         value={inputValue}
         defaultValue={props.defaultValue}
         size={inputSize}
