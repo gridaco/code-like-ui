@@ -5,6 +5,7 @@ import { format } from "@coli.codes/ast-formatter";
 import { get_color_scheme_for_syntax_kind } from "../color-scheme-mappings";
 import { SyntaxKind } from "@coli.codes/core-syntax-kind";
 import hljs from "highlight.js";
+import "highlight.js/styles/vs2015.css";
 
 export function ColiCodeView({
   coli,
@@ -12,25 +13,36 @@ export function ColiCodeView({
   language = "typescript",
   flatten = true,
   depth = 0,
+  useHightlight = true,
 }: {
   coli: ColiObject | ColiObject[];
   fallbackContentColor?: string;
   language?: "typescript";
   flatten?: boolean;
+  useHightlight?: boolean;
   depth?: number;
 }) {
   const ast = format(coli);
 
   const token = useRef();
-  // useEffect(() => {
-  //   if (token.current) {
-  //     hljs.highlightElement(token.current);
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (useHightlight) {
+      if (token.current) {
+        hljs.configure({
+          languages: ["tsx"],
+        });
+        hljs.highlightElement(token.current);
+      }
+    }
+  }, []);
 
   return (
     <div ref={token}>
-      <AstView token={ast} />
+      <pre>
+        <code>
+          <AstView token={ast} />
+        </code>
+      </pre>
     </div>
   );
 }
