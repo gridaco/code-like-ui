@@ -18,6 +18,8 @@ export const Input = (props: InputProps) => {
     if (!inputValue) {
       if (props.defaultValue) {
         setInputSize(props.defaultValue.length);
+      } else if (props.placeholder) {
+        setInputSize(props.placeholder.length);
       } else {
         setInputSize(5);
       }
