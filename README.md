@@ -143,6 +143,7 @@ For more color scheme options & customization, read [docs/color-scheme.md](./doc
 
 ## References
 
+- [vscode-webview-ui-toolkit](https://github.com/microsoft/vscode-webview-ui-toolkit)
 - https://material-ui.com/components/selects/
 
 [designlink]: https://www.figma.com/file/nHJQZjVwnF2dtx153MS9J1/code-ui?node-id=2%3A354
