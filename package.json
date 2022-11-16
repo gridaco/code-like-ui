@@ -23,7 +23,7 @@
     "clean": "rimraf packages/*/dist",
     "lerna": "lerna",
     "build": "yarn clean && lerna run build",
-    "publish:all": "yarn build && lerna publish --force-publish coli",
+    "publish:all": "yarn build && lerna publish --force-publish @code-ui/core",
     "lerna:version": "yarn lerna version --no-private",
     "bootstrap": "lerna bootstrap"
   }
