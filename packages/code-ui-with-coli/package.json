@@ -7,6 +7,5 @@
     "private": false,
     "dependencies": {
         "@coli.codes/core-syntax-kind": "^0.0.0"
-    },
-    "gitHead": "88316a398a6ecce388d898ae28c5670bf6da110c"
+    }
 }

@@ -37,6 +37,5 @@
     "dist/index.d.ts",
     "dist/**/*.d.ts",
     "dist/**/*.js"
-  ],
-  "gitHead": "88316a398a6ecce388d898ae28c5670bf6da110c"
+  ]
 }
