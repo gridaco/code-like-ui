@@ -1,6 +1,6 @@
 {
   "name": "@code-ui/completion-provider",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "repository": "https://github.com/gridaco/code-like-ui/tree/main/packages/interface",
   "homepage": "https://github.com/gridaco/code-like-ui",
   "author": "Grida.co",
@@ -16,7 +16,7 @@
     "react-dom": "17.0.2"
   },
   "dependencies": {
-    "@code-ui/hover": "^0.1.4",
+    "@code-ui/hover": "^0.1.5",
     "@tippyjs/react": "^4.2.5"
   },
   "devDependencies": {
