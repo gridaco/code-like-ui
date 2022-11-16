@@ -1,6 +1,6 @@
 {
   "name": "@code-ui/hover",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "repository": "https://github.com/gridaco/code-like-ui/tree/main/packages/interface",
   "homepage": "https://github.com/gridaco/code-like-ui",
   "author": "Grida.co",
@@ -34,5 +34,5 @@
     "dist/**/*.d.ts",
     "dist/**/*.js"
   ],
-  "gitHead": "42343403965a2c17ca348784085a35f76fd3e3ea"
+  "gitHead": "88316a398a6ecce388d898ae28c5670bf6da110c"
 }
