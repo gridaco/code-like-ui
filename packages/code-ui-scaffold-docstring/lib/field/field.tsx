@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
-import Handlebars from "handlebars";
+import Handlebars from "handlebars/dist/cjs/handlebars";
 import { DropDown } from "@code-ui/token";
 import { IField } from "../type";
 
