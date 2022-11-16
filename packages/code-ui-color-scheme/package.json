@@ -1,6 +1,6 @@
 {
   "name": "@code-ui/color-scheme",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "repository": "https://github.com/gridaco/code-like-ui/tree/main/packages/interface",
   "homepage": "https://github.com/gridaco/code-like-ui",
   "author": "Grida.co",
@@ -33,5 +33,6 @@
     "dist/index.d.ts",
     "dist/**/*.d.ts",
     "dist/**/*.js"
-  ]
+  ],
+  "gitHead": "42343403965a2c17ca348784085a35f76fd3e3ea"
 }
