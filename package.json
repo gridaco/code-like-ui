@@ -14,11 +14,17 @@
     "@storybook/addon-links": "^6.3.8",
     "@storybook/react": "^6.3.8",
     "babel-loader": "^8.2.2",
+    "lerna": "^6.0.3",
     "typescript": "^4.4.2"
   },
-  "dependencies": {},
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "clean": "rimraf packages/*/dist",
+    "lerna": "lerna",
+    "build": "yarn clean && lerna run build",
+    "publish:all": "yarn build && lerna publish --force-publish coli",
+    "lerna:version": "yarn lerna version --no-private",
+    "bootstrap": "lerna bootstrap"
   }
 }
